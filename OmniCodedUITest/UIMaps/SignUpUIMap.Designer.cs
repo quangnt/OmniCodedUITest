@@ -44,15 +44,15 @@ namespace OmniCodedUITest.UIMaps.SignUpUIMapClasses
             }
         }
         
-        public UISignUpFormClient UISignUpFormClient
+        public UIPersonifySignUpSubForm UIPersonifySignUpSubForm
         {
             get
             {
-                if ((this.mUISignUpFormClient == null))
+                if ((this.mUIPersonifySignUpSubForm == null))
                 {
-                    this.mUISignUpFormClient = new UISignUpFormClient();
+                    this.mUIPersonifySignUpSubForm = new UIPersonifySignUpSubForm();
                 }
-                return this.mUISignUpFormClient;
+                return this.mUIPersonifySignUpSubForm;
             }
         }
         #endregion
@@ -60,7 +60,7 @@ namespace OmniCodedUITest.UIMaps.SignUpUIMapClasses
         #region Fields
         private UIPersonifyWindow mUIPersonifyWindow;
         
-        private UISignUpFormClient mUISignUpFormClient;
+        private UIPersonifySignUpSubForm mUIPersonifySignUpSubForm;
         #endregion
     }
     
@@ -78,21 +78,6 @@ namespace OmniCodedUITest.UIMaps.SignUpUIMapClasses
         }
         
         #region Properties
-        public WpfImage UIPersonifyLogoImage
-        {
-            get
-            {
-                if ((this.mUIPersonifyLogoImage == null))
-                {
-                    this.mUIPersonifyLogoImage = new WpfImage(this);
-                    #region Search Criteria
-                    this.mUIPersonifyLogoImage.WindowTitles.Add("Personify");
-                    #endregion
-                }
-                return this.mUIPersonifyLogoImage;
-            }
-        }
-        
         public WpfButton UICloseButton
         {
             get
@@ -109,69 +94,137 @@ namespace OmniCodedUITest.UIMaps.SignUpUIMapClasses
             }
         }
         
-        public UIGobackText UIGobackText
+        public WpfButton UISignUpMainMenu
         {
             get
             {
-                if ((this.mUIGobackText == null))
+                if ((this.mUISignUpMainMenu == null))
                 {
-                    this.mUIGobackText = new UIGobackText(this);
+                    this.mUISignUpMainMenu = new WpfButton(this);
+                    #region Search Criteria
+                    this.mUISignUpMainMenu.WindowTitles.Add("Personify");
+                    #endregion
                 }
-                return this.mUIGobackText;
+                return this.mUISignUpMainMenu;
+            }
+        }
+        
+        public UIPersonifySignUpForm UIPersonifySignUpForm
+        {
+            get
+            {
+                if ((this.mUIPersonifySignUpForm == null))
+                {
+                    this.mUIPersonifySignUpForm = new UIPersonifySignUpForm(this);
+                }
+                return this.mUIPersonifySignUpForm;
             }
         }
         #endregion
         
         #region Fields
-        private WpfImage mUIPersonifyLogoImage;
-        
         private WpfButton mUICloseButton;
         
-        private UIGobackText mUIGobackText;
+        private WpfButton mUISignUpMainMenu;
+        
+        private UIPersonifySignUpForm mUIPersonifySignUpForm;
         #endregion
     }
     
     [GeneratedCode("Coded UITest Builder", "11.0.50727.1")]
-    public class UIGobackText : WpfText
+    public class UIPersonifySignUpForm : WpfCustom
     {
         
-        public UIGobackText(UITestControl searchLimitContainer) : 
+        public UIPersonifySignUpForm(UITestControl searchLimitContainer) : 
                 base(searchLimitContainer)
         {
             #region Search Criteria
-            this.SearchProperties[WpfText.PropertyNames.Name] = "Go back";
+            this.SearchProperties[UITestControl.PropertyNames.ClassName] = "Uia.RegisterWebUC";
             this.WindowTitles.Add("Personify");
             #endregion
         }
         
         #region Properties
-        public WpfHyperlink UIGobackHyperlink
+        public WpfButton UIGoogleSignUpButton
         {
             get
             {
-                if ((this.mUIGobackHyperlink == null))
+                if ((this.mUIGoogleSignUpButton == null))
                 {
-                    this.mUIGobackHyperlink = new WpfHyperlink(this);
+                    this.mUIGoogleSignUpButton = new WpfButton(this);
                     #region Search Criteria
-                    this.mUIGobackHyperlink.SearchProperties[WpfHyperlink.PropertyNames.Name] = "Go back";
-                    this.mUIGobackHyperlink.WindowTitles.Add("Personify");
+                    this.mUIGoogleSignUpButton.WindowTitles.Add("Personify");
                     #endregion
                 }
-                return this.mUIGobackHyperlink;
+                return this.mUIGoogleSignUpButton;
+            }
+        }
+        
+        public WpfText UIORText
+        {
+            get
+            {
+                if ((this.mUIORText == null))
+                {
+                    this.mUIORText = new WpfText(this);
+                    #region Search Criteria
+                    this.mUIORText.SearchProperties[WpfText.PropertyNames.Name] = "or";
+                    this.mUIORText.WindowTitles.Add("Personify");
+                    #endregion
+                }
+                return this.mUIORText;
+            }
+        }
+        
+        public WpfText UISignUpText
+        {
+            get
+            {
+                if ((this.mUISignUpText == null))
+                {
+                    this.mUISignUpText = new WpfText(this);
+                    #region Search Criteria
+                    this.mUISignUpText.SearchProperties[WpfText.PropertyNames.Name] = "Sign Up";
+                    this.mUISignUpText.WindowTitles.Add("Personify");
+                    #endregion
+                }
+                return this.mUISignUpText;
+            }
+        }
+        
+        public WpfButton UIAlreadyhaveanaccountButton
+        {
+            get
+            {
+                if ((this.mUIAlreadyhaveanaccountButton == null))
+                {
+                    this.mUIAlreadyhaveanaccountButton = new WpfButton(this);
+                    #region Search Criteria
+                    this.mUIAlreadyhaveanaccountButton.SearchProperties[WpfButton.PropertyNames.Name] = "Already have an account? Sign In";
+                    this.mUIAlreadyhaveanaccountButton.WindowTitles.Add("Personify");
+                    #endregion
+                }
+                return this.mUIAlreadyhaveanaccountButton;
             }
         }
         #endregion
         
         #region Fields
-        private WpfHyperlink mUIGobackHyperlink;
+        private WpfButton mUIGoogleSignUpButton;
+        
+        private WpfText mUIORText;
+        
+        private WpfText mUISignUpText;
+        
+        private WpfButton mUIAlreadyhaveanaccountButton;
         #endregion
     }
     
     [GeneratedCode("Coded UITest Builder", "11.0.50727.1")]
-    public class UISignUpFormClient : WinClient
+    public class UIPersonifySignUpSubForm : WinClient
     {
         
-        public UISignUpFormClient()
+        public UIPersonifySignUpSubForm()
         {
             #region Search Criteria
             this.SearchProperties[WinControl.PropertyNames.ClassName] = "Internet Explorer_Server";
@@ -179,29 +232,29 @@ namespace OmniCodedUITest.UIMaps.SignUpUIMapClasses
         }
         
         #region Properties
-        public UIPersonifyOmniCreateaDocument UIPersonifyOmniCreateaDocument
+        public UIPersonifyOmniCreateDocument UIPersonifyOmniCreateDocument
         {
             get
             {
-                if ((this.mUIPersonifyOmniCreateaDocument == null))
+                if ((this.mUIPersonifyOmniCreateDocument == null))
                 {
-                    this.mUIPersonifyOmniCreateaDocument = new UIPersonifyOmniCreateaDocument(this);
+                    this.mUIPersonifyOmniCreateDocument = new UIPersonifyOmniCreateDocument(this);
                 }
-                return this.mUIPersonifyOmniCreateaDocument;
+                return this.mUIPersonifyOmniCreateDocument;
             }
         }
         #endregion
         
         #region Fields
-        private UIPersonifyOmniCreateaDocument mUIPersonifyOmniCreateaDocument;
+        private UIPersonifyOmniCreateDocument mUIPersonifyOmniCreateDocument;
         #endregion
     }
     
     [GeneratedCode("Coded UITest Builder", "11.0.50727.1")]
-    public class UIPersonifyOmniCreateaDocument : HtmlDocument
+    public class UIPersonifyOmniCreateDocument : HtmlDocument
     {
         
-        public UIPersonifyOmniCreateaDocument(UITestControl searchLimitContainer) : 
+        public UIPersonifyOmniCreateDocument(UITestControl searchLimitContainer) : 
                 base(searchLimitContainer)
         {
             #region Search Criteria
@@ -210,29 +263,29 @@ namespace OmniCodedUITest.UIMaps.SignUpUIMapClasses
             this.SearchProperties[HtmlDocument.PropertyNames.FrameDocument] = "False";
             this.FilterProperties[HtmlDocument.PropertyNames.Title] = "Personify Omni - Create account";
             this.FilterProperties[HtmlDocument.PropertyNames.AbsolutePath] = "/api/register";
-            this.FilterProperties[HtmlDocument.PropertyNames.PageUrl] = "https://omni.personifyinc.com/api/register";
+            this.FilterProperties[HtmlDocument.PropertyNames.PageUrl] = "https://dev.personifyinc.com/api/register?lang=en-US";
             #endregion
         }
         
         #region Properties
-        public HtmlDiv UIOmniusersformcontainPane
+        public HtmlDiv UIPersonifySignUpSubPanel
         {
             get
             {
-                if ((this.mUIOmniusersformcontainPane == null))
+                if ((this.mUIPersonifySignUpSubPanel == null))
                 {
-                    this.mUIOmniusersformcontainPane = new HtmlDiv(this);
+                    this.mUIPersonifySignUpSubPanel = new HtmlDiv(this);
                     #region Search Criteria
-                    this.mUIOmniusersformcontainPane.SearchProperties[HtmlDiv.PropertyNames.Id] = "omni-users-form-container";
-                    this.mUIOmniusersformcontainPane.SearchProperties[HtmlDiv.PropertyNames.Name] = null;
-                    this.mUIOmniusersformcontainPane.FilterProperties[HtmlDiv.PropertyNames.InnerText] = "Sign Up for Personify!\r\n \r\n   \r\n First N";
-                    this.mUIOmniusersformcontainPane.FilterProperties[HtmlDiv.PropertyNames.Title] = null;
-                    this.mUIOmniusersformcontainPane.FilterProperties[HtmlDiv.PropertyNames.Class] = null;
-                    this.mUIOmniusersformcontainPane.FilterProperties[HtmlDiv.PropertyNames.ControlDefinition] = "id=omni-users-form-container";
-                    this.mUIOmniusersformcontainPane.FilterProperties[HtmlDiv.PropertyNames.TagInstance] = "1";
+                    this.mUIPersonifySignUpSubPanel.SearchProperties[HtmlDiv.PropertyNames.Id] = "omni-users-form-container";
+                    this.mUIPersonifySignUpSubPanel.SearchProperties[HtmlDiv.PropertyNames.Name] = null;
+                    this.mUIPersonifySignUpSubPanel.FilterProperties[HtmlDiv.PropertyNames.InnerText] = "Sign Up for Personify!\r\n \r\n   \r\n  I agre";
+                    this.mUIPersonifySignUpSubPanel.FilterProperties[HtmlDiv.PropertyNames.Title] = null;
+                    this.mUIPersonifySignUpSubPanel.FilterProperties[HtmlDiv.PropertyNames.Class] = null;
+                    this.mUIPersonifySignUpSubPanel.FilterProperties[HtmlDiv.PropertyNames.ControlDefinition] = "id=omni-users-form-container";
+                    this.mUIPersonifySignUpSubPanel.FilterProperties[HtmlDiv.PropertyNames.TagInstance] = "1";
                     #endregion
                 }
-                return this.mUIOmniusersformcontainPane;
+                return this.mUIPersonifySignUpSubPanel;
             }
         }
         
@@ -280,112 +333,91 @@ namespace OmniCodedUITest.UIMaps.SignUpUIMapClasses
             }
         }
         
-        public HtmlEdit UIUserEmailEdit
+        public HtmlEdit UIUseremailEdit
         {
             get
             {
-                if ((this.mUIUserEmailEdit == null))
+                if ((this.mUIUseremailEdit == null))
                 {
-                    this.mUIUserEmailEdit = new HtmlEdit(this);
+                    this.mUIUseremailEdit = new HtmlEdit(this);
                     #region Search Criteria
-                    this.mUIUserEmailEdit.SearchProperties[HtmlEdit.PropertyNames.Id] = "User_email";
-                    this.mUIUserEmailEdit.SearchProperties[HtmlEdit.PropertyNames.Name] = "User[email]";
-                    this.mUIUserEmailEdit.FilterProperties[HtmlEdit.PropertyNames.LabeledBy] = null;
-                    this.mUIUserEmailEdit.FilterProperties[HtmlEdit.PropertyNames.Type] = "SINGLELINE";
-                    this.mUIUserEmailEdit.FilterProperties[HtmlEdit.PropertyNames.Title] = null;
-                    this.mUIUserEmailEdit.FilterProperties[HtmlEdit.PropertyNames.Class] = "placeholder";
-                    this.mUIUserEmailEdit.FilterProperties[HtmlEdit.PropertyNames.ControlDefinition] = "name=User[email] tabIndex=3 class=placeh";
-                    this.mUIUserEmailEdit.FilterProperties[HtmlEdit.PropertyNames.TagInstance] = "3";
+                    this.mUIUseremailEdit.SearchProperties[HtmlEdit.PropertyNames.Id] = "User_email";
+                    this.mUIUseremailEdit.SearchProperties[HtmlEdit.PropertyNames.Name] = "User[email]";
+                    this.mUIUseremailEdit.FilterProperties[HtmlEdit.PropertyNames.LabeledBy] = null;
+                    this.mUIUseremailEdit.FilterProperties[HtmlEdit.PropertyNames.Type] = "SINGLELINE";
+                    this.mUIUseremailEdit.FilterProperties[HtmlEdit.PropertyNames.Title] = null;
+                    this.mUIUseremailEdit.FilterProperties[HtmlEdit.PropertyNames.Class] = "placeholder";
+                    this.mUIUseremailEdit.FilterProperties[HtmlEdit.PropertyNames.ControlDefinition] = "name=User[email] tabIndex=3 class=placeh";
+                    this.mUIUseremailEdit.FilterProperties[HtmlEdit.PropertyNames.TagInstance] = "3";
                     #endregion
                 }
-                return this.mUIUserEmailEdit;
+                return this.mUIUseremailEdit;
             }
         }
         
-        public HtmlEdit UIPasswordplaceholderEdit
+        public HtmlEdit UIUser_passwordEdit
         {
             get
             {
-                if ((this.mUIPasswordplaceholderEdit == null))
+                if ((this.mUIUser_passwordEdit == null))
                 {
-                    this.mUIPasswordplaceholderEdit = new HtmlEdit(this);
+                    this.mUIUser_passwordEdit = new HtmlEdit(this);
                     #region Search Criteria
-                    this.mUIPasswordplaceholderEdit.SearchProperties[HtmlEdit.PropertyNames.Id] = "User_password-placeholder";
-                    this.mUIPasswordplaceholderEdit.SearchProperties[HtmlEdit.PropertyNames.Name] = null;
-                    this.mUIPasswordplaceholderEdit.SearchProperties[HtmlEdit.PropertyNames.LabeledBy] = null;
-                    this.mUIPasswordplaceholderEdit.SearchProperties[HtmlEdit.PropertyNames.Type] = "SINGLELINE";
-                    this.mUIPasswordplaceholderEdit.FilterProperties[HtmlEdit.PropertyNames.Title] = null;
-                    this.mUIPasswordplaceholderEdit.FilterProperties[HtmlEdit.PropertyNames.Class] = "placeholder";
-                    this.mUIPasswordplaceholderEdit.FilterProperties[HtmlEdit.PropertyNames.ControlDefinition] = "tabIndex=4 class=placeholder id=User_pas";
-                    this.mUIPasswordplaceholderEdit.FilterProperties[HtmlEdit.PropertyNames.TagInstance] = "4";
+                    this.mUIUser_passwordEdit.SearchProperties[HtmlEdit.PropertyNames.Id] = "User_password";
+                    this.mUIUser_passwordEdit.SearchProperties[HtmlEdit.PropertyNames.Name] = null;
+                    this.mUIUser_passwordEdit.SearchProperties[HtmlEdit.PropertyNames.LabeledBy] = null;
+                    this.mUIUser_passwordEdit.SearchProperties[HtmlEdit.PropertyNames.Type] = "SINGLELINE";
+                    this.mUIUser_passwordEdit.FilterProperties[HtmlEdit.PropertyNames.Title] = null;
+                    this.mUIUser_passwordEdit.FilterProperties[HtmlEdit.PropertyNames.Class] = "placeholder";
+                    this.mUIUser_passwordEdit.FilterProperties[HtmlEdit.PropertyNames.ControlDefinition] = "tabIndex=4 class=placeholder id=User_pas";
+                    this.mUIUser_passwordEdit.FilterProperties[HtmlEdit.PropertyNames.TagInstance] = "4";
                     #endregion
                 }
-                return this.mUIPasswordplaceholderEdit;
+                return this.mUIUser_passwordEdit;
             }
         }
         
-        public HtmlEdit UIRepeatplaceholderEdit
+        public HtmlEdit UIRepeatEdit
         {
             get
             {
-                if ((this.mUIRepeatplaceholderEdit == null))
+                if ((this.mUIRepeatEdit == null))
                 {
-                    this.mUIRepeatplaceholderEdit = new HtmlEdit(this);
+                    this.mUIRepeatEdit = new HtmlEdit(this);
                     #region Search Criteria
-                    this.mUIRepeatplaceholderEdit.SearchProperties[HtmlEdit.PropertyNames.Id] = "User_password_repeat-placeholder";
-                    this.mUIRepeatplaceholderEdit.SearchProperties[HtmlEdit.PropertyNames.Name] = null;
-                    this.mUIRepeatplaceholderEdit.SearchProperties[HtmlEdit.PropertyNames.LabeledBy] = null;
-                    this.mUIRepeatplaceholderEdit.SearchProperties[HtmlEdit.PropertyNames.Type] = "SINGLELINE";
-                    this.mUIRepeatplaceholderEdit.FilterProperties[HtmlEdit.PropertyNames.Title] = null;
-                    this.mUIRepeatplaceholderEdit.FilterProperties[HtmlEdit.PropertyNames.Class] = "placeholder";
-                    this.mUIRepeatplaceholderEdit.FilterProperties[HtmlEdit.PropertyNames.ControlDefinition] = "tabIndex=5 class=placeholder id=User_pas";
-                    this.mUIRepeatplaceholderEdit.FilterProperties[HtmlEdit.PropertyNames.TagInstance] = "6";
+                    this.mUIRepeatEdit.SearchProperties[HtmlEdit.PropertyNames.Id] = "User_password_repeat";
+                    this.mUIRepeatEdit.SearchProperties[HtmlEdit.PropertyNames.Name] = null;
+                    this.mUIRepeatEdit.SearchProperties[HtmlEdit.PropertyNames.LabeledBy] = null;
+                    this.mUIRepeatEdit.SearchProperties[HtmlEdit.PropertyNames.Type] = "SINGLELINE";
+                    this.mUIRepeatEdit.FilterProperties[HtmlEdit.PropertyNames.Title] = null;
+                    this.mUIRepeatEdit.FilterProperties[HtmlEdit.PropertyNames.Class] = "placeholder";
+                    this.mUIRepeatEdit.FilterProperties[HtmlEdit.PropertyNames.ControlDefinition] = "tabIndex=5 class=placeholder id=User_pas";
+                    this.mUIRepeatEdit.FilterProperties[HtmlEdit.PropertyNames.TagInstance] = "6";
                     #endregion
                 }
-                return this.mUIRepeatplaceholderEdit;
+                return this.mUIRepeatEdit;
             }
         }
         
-        public HtmlDiv UIFirstNameBlankWarning
+        public HtmlCheckBox UIAgreeTermsCheckBox
         {
             get
             {
-                if ((this.mUIFirstNameBlankWarning == null))
+                if ((this.mUIAgreeTermsCheckBox == null))
                 {
-                    this.mUIFirstNameBlankWarning = new HtmlDiv(this);
+                    this.mUIAgreeTermsCheckBox = new HtmlCheckBox(this);
                     #region Search Criteria
-                    this.mUIFirstNameBlankWarning.SearchProperties[HtmlDiv.PropertyNames.Id] = "User_first_name_em_";
-                    this.mUIFirstNameBlankWarning.SearchProperties[HtmlDiv.PropertyNames.Name] = null;
-                    this.mUIFirstNameBlankWarning.FilterProperties[HtmlDiv.PropertyNames.InnerText] = "First Name cannot be blank.";
-                    this.mUIFirstNameBlankWarning.FilterProperties[HtmlDiv.PropertyNames.Title] = null;
-                    this.mUIFirstNameBlankWarning.FilterProperties[HtmlDiv.PropertyNames.Class] = "errorMessage errorMessaged";
-                    this.mUIFirstNameBlankWarning.FilterProperties[HtmlDiv.PropertyNames.ControlDefinition] = "class=\"errorMessage errorMessaged\" id=Us";
-                    this.mUIFirstNameBlankWarning.FilterProperties[HtmlDiv.PropertyNames.TagInstance] = "21";
+                    this.mUIAgreeTermsCheckBox.SearchProperties[HtmlCheckBox.PropertyNames.Id] = "terms_service_cb";
+                    this.mUIAgreeTermsCheckBox.SearchProperties[HtmlCheckBox.PropertyNames.Name] = "User[terms_service]";
+                    this.mUIAgreeTermsCheckBox.FilterProperties[HtmlCheckBox.PropertyNames.Value] = "1";
+                    this.mUIAgreeTermsCheckBox.FilterProperties[HtmlCheckBox.PropertyNames.LabeledBy] = "I agree to the Terms of Service  ";
+                    this.mUIAgreeTermsCheckBox.FilterProperties[HtmlCheckBox.PropertyNames.Title] = null;
+                    this.mUIAgreeTermsCheckBox.FilterProperties[HtmlCheckBox.PropertyNames.Class] = "ez-hide";
+                    this.mUIAgreeTermsCheckBox.FilterProperties[HtmlCheckBox.PropertyNames.ControlDefinition] = "name=User[terms_service] tabIndex=6 clas";
+                    this.mUIAgreeTermsCheckBox.FilterProperties[HtmlCheckBox.PropertyNames.TagInstance] = "10";
                     #endregion
                 }
-                return this.mUIFirstNameBlankWarning;
-            }
-        }
-        
-        public HtmlCheckBox UIIagreetotheTermsofSeCheckBox
-        {
-            get
-            {
-                if ((this.mUIIagreetotheTermsofSeCheckBox == null))
-                {
-                    this.mUIIagreetotheTermsofSeCheckBox = new HtmlCheckBox(this);
-                    #region Search Criteria
-                    this.mUIIagreetotheTermsofSeCheckBox.SearchProperties[HtmlCheckBox.PropertyNames.Id] = "terms_service_cb";
-                    this.mUIIagreetotheTermsofSeCheckBox.SearchProperties[HtmlCheckBox.PropertyNames.Name] = "User[terms_service]";
-                    this.mUIIagreetotheTermsofSeCheckBox.FilterProperties[HtmlCheckBox.PropertyNames.Value] = "1";
-                    this.mUIIagreetotheTermsofSeCheckBox.FilterProperties[HtmlCheckBox.PropertyNames.LabeledBy] = "I agree to the Terms of Service  ";
-                    this.mUIIagreetotheTermsofSeCheckBox.FilterProperties[HtmlCheckBox.PropertyNames.Title] = null;
-                    this.mUIIagreetotheTermsofSeCheckBox.FilterProperties[HtmlCheckBox.PropertyNames.Class] = "ez-hide";
-                    this.mUIIagreetotheTermsofSeCheckBox.FilterProperties[HtmlCheckBox.PropertyNames.ControlDefinition] = "name=User[terms_service] tabIndex=6 clas";
-                    this.mUIIagreetotheTermsofSeCheckBox.FilterProperties[HtmlCheckBox.PropertyNames.TagInstance] = "10";
-                    #endregion
-                }
-                return this.mUIIagreetotheTermsofSeCheckBox;
+                return this.mUIAgreeTermsCheckBox;
             }
         }
         
@@ -401,49 +433,47 @@ namespace OmniCodedUITest.UIMaps.SignUpUIMapClasses
             }
         }
         
-        public HtmlInputButton UICreateyouraccountButton
+        public HtmlInputButton UICreateAccountButton
         {
             get
             {
-                if ((this.mUICreateyouraccountButton == null))
+                if ((this.mUICreateAccountButton == null))
                 {
-                    this.mUICreateyouraccountButton = new HtmlInputButton(this);
+                    this.mUICreateAccountButton = new HtmlInputButton(this);
                     #region Search Criteria
-                    this.mUICreateyouraccountButton.SearchProperties[HtmlButton.PropertyNames.Id] = "register-btn";
-                    this.mUICreateyouraccountButton.SearchProperties[HtmlButton.PropertyNames.Name] = "yt0";
-                    this.mUICreateyouraccountButton.FilterProperties[HtmlButton.PropertyNames.DisplayText] = "Create your account";
-                    this.mUICreateyouraccountButton.FilterProperties[HtmlButton.PropertyNames.Type] = "submit";
-                    this.mUICreateyouraccountButton.FilterProperties[HtmlButton.PropertyNames.Title] = null;
-                    this.mUICreateyouraccountButton.FilterProperties[HtmlButton.PropertyNames.Class] = "btn btn-primary inactive is-small-separator disabled";
-                    this.mUICreateyouraccountButton.FilterProperties[HtmlButton.PropertyNames.ControlDefinition] = "name=yt0 disabled class=\"btn btn-primary";
-                    this.mUICreateyouraccountButton.FilterProperties[HtmlButton.PropertyNames.TagInstance] = "11";
+                    this.mUICreateAccountButton.SearchProperties[HtmlButton.PropertyNames.Id] = "register-btn";
+                    this.mUICreateAccountButton.SearchProperties[HtmlButton.PropertyNames.Name] = "create";
+                    this.mUICreateAccountButton.FilterProperties[HtmlButton.PropertyNames.DisplayText] = "Create your account";
+                    this.mUICreateAccountButton.FilterProperties[HtmlButton.PropertyNames.Type] = "submit";
+                    this.mUICreateAccountButton.FilterProperties[HtmlButton.PropertyNames.Title] = null;
+                    this.mUICreateAccountButton.FilterProperties[HtmlButton.PropertyNames.Class] = "btn btn-primary inactive is-small-separator disabled";
+                    this.mUICreateAccountButton.FilterProperties[HtmlButton.PropertyNames.ControlDefinition] = "name=create disabled class=\"btn btn-prim";
+                    this.mUICreateAccountButton.FilterProperties[HtmlButton.PropertyNames.TagInstance] = "11";
                     #endregion
                 }
-                return this.mUICreateyouraccountButton;
+                return this.mUICreateAccountButton;
             }
         }
         #endregion
         
         #region Fields
-        private HtmlDiv mUIOmniusersformcontainPane;
+        private HtmlDiv mUIPersonifySignUpSubPanel;
         
         private HtmlEdit mUIFirstNameEdit;
         
         private HtmlEdit mUILastNameEdit;
         
-        private HtmlEdit mUIUserEmailEdit;
+        private HtmlEdit mUIUseremailEdit;
         
-        private HtmlEdit mUIPasswordplaceholderEdit;
+        private HtmlEdit mUIUser_passwordEdit;
         
-        private HtmlEdit mUIRepeatplaceholderEdit;
+        private HtmlEdit mUIRepeatEdit;
         
-        private HtmlDiv mUIFirstNameBlankWarning;
-        
-        private HtmlCheckBox mUIIagreetotheTermsofSeCheckBox;
+        private HtmlCheckBox mUIAgreeTermsCheckBox;
         
         private UIIagreetotheTermsofSeLabel mUIIagreetotheTermsofSeLabel;
         
-        private HtmlInputButton mUICreateyouraccountButton;
+        private HtmlInputButton mUICreateAccountButton;
         #endregion
     }
     
@@ -480,9 +510,9 @@ namespace OmniCodedUITest.UIMaps.SignUpUIMapClasses
                     this.mUITermsofServiceHyperlink.SearchProperties[HtmlHyperlink.PropertyNames.InnerText] = "Terms of Service";
                     this.mUITermsofServiceHyperlink.FilterProperties[HtmlHyperlink.PropertyNames.AbsolutePath] = "/corporate/terms";
                     this.mUITermsofServiceHyperlink.FilterProperties[HtmlHyperlink.PropertyNames.Title] = null;
-                    this.mUITermsofServiceHyperlink.FilterProperties[HtmlHyperlink.PropertyNames.Href] = "https://omni.personifyinc.com/corporate/terms";
+                    this.mUITermsofServiceHyperlink.FilterProperties[HtmlHyperlink.PropertyNames.Href] = "https://dev.personifyinc.com/corporate/terms";
                     this.mUITermsofServiceHyperlink.FilterProperties[HtmlHyperlink.PropertyNames.Class] = "u";
-                    this.mUITermsofServiceHyperlink.FilterProperties[HtmlHyperlink.PropertyNames.ControlDefinition] = "tabIndex=7 class=u href=\"/corporate/term";
+                    this.mUITermsofServiceHyperlink.FilterProperties[HtmlHyperlink.PropertyNames.ControlDefinition] = "class=u href=\"/corporate/terms\" target=_";
                     this.mUITermsofServiceHyperlink.FilterProperties[HtmlHyperlink.PropertyNames.TagInstance] = "1";
                     #endregion
                 }

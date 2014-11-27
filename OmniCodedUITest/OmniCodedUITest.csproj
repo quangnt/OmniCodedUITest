@@ -63,6 +63,12 @@
     <Compile Include="UIMaps\GoogleSignInUIMap.Designer.cs">
       <DependentUpon>GoogleSignInUIMap.uitest</DependentUpon>
     </Compile>
+    <Compile Include="UIMaps\InstallerUIMap.cs">
+      <DependentUpon>InstallerUIMap.uitest</DependentUpon>
+    </Compile>
+    <Compile Include="UIMaps\InstallerUIMap.Designer.cs">
+      <DependentUpon>InstallerUIMap.uitest</DependentUpon>
+    </Compile>
     <Compile Include="UIMaps\MainControlPanel.cs">
       <DependentUpon>MainControlPanel.uitest</DependentUpon>
     </Compile>
@@ -81,12 +87,27 @@
     <Compile Include="UIMaps\SignUpUIMap.Designer.cs">
       <DependentUpon>SignUpUIMap.uitest</DependentUpon>
     </Compile>
+    <Compile Include="UIMaps\VideoCallTextChatUIMap.cs">
+      <DependentUpon>VideoCallTextChatUIMap.uitest</DependentUpon>
+    </Compile>
+    <Compile Include="UIMaps\VideoCallTextChatUIMap.Designer.cs">
+      <DependentUpon>VideoCallTextChatUIMap.uitest</DependentUpon>
+    </Compile>
+    <Compile Include="UIMaps\VideoCallUIMap.cs">
+      <DependentUpon>VideoCallUIMap.uitest</DependentUpon>
+    </Compile>
+    <Compile Include="UIMaps\VideoCallUIMap.Designer.cs">
+      <DependentUpon>VideoCallUIMap.uitest</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <None Include="UIMaps\GoogleSignInUIMap.uitest" />
+    <None Include="UIMaps\InstallerUIMap.uitest" />
     <None Include="UIMaps\MainControlPanel.uitest" />
     <None Include="UIMaps\LoginUIMap.uitest" />
     <None Include="UIMaps\SignUpUIMap.uitest" />
+    <None Include="UIMaps\VideoCallTextChatUIMap.uitest" />
+    <None Include="UIMaps\VideoCallUIMap.uitest" />
   </ItemGroup>
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">

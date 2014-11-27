@@ -57,17 +57,6 @@
           </AndCondition>
           <SupportLevel>0</SupportLevel>
           <Descendants>
-            <UIObject ControlType="Image" Id="UIPersonifyLogoImage" FriendlyName="" SpecialControlType="None">
-              <TechnologyName>UIA</TechnologyName>
-              <WindowTitles>
-                <WindowTitle>Personify</WindowTitle>
-              </WindowTitles>
-              <AndCondition>
-                <PropertyCondition Name="ControlType">Image</PropertyCondition>
-              </AndCondition>
-              <SupportLevel>0</SupportLevel>
-              <Descendants />
-            </UIObject>
             <UIObject ControlType="Button" Id="UICloseButton" FriendlyName="Close" SpecialControlType="None">
               <TechnologyName>UIA</TechnologyName>
               <WindowTitles>
@@ -80,25 +69,71 @@
               <SupportLevel>0</SupportLevel>
               <Descendants />
             </UIObject>
-            <UIObject ControlType="Text" Id="UIGobackText" FriendlyName="Go back" SpecialControlType="None">
+            <UIObject ControlType="Button" Id="UISignUpMainMenu" FriendlyName="" SpecialControlType="None">
               <TechnologyName>UIA</TechnologyName>
               <WindowTitles>
                 <WindowTitle>Personify</WindowTitle>
               </WindowTitles>
               <AndCondition>
-                <PropertyCondition Name="ControlType">Text</PropertyCondition>
-                <PropertyCondition Name="Name">Go back</PropertyCondition>
+                <PropertyCondition Name="ControlType">Button</PropertyCondition>
+              </AndCondition>
+              <SupportLevel>0</SupportLevel>
+              <Descendants />
+            </UIObject>
+            <UIObject ControlType="Custom" Id="UIPersonifySignUpForm" FriendlyName="" SpecialControlType="None">
+              <TechnologyName>UIA</TechnologyName>
+              <WindowTitles>
+                <WindowTitle>Personify</WindowTitle>
+              </WindowTitles>
+              <AndCondition>
+                <PropertyCondition Name="ControlType">Custom</PropertyCondition>
+                <PropertyCondition Name="ClassName">Uia.RegisterWebUC</PropertyCondition>
               </AndCondition>
               <SupportLevel>0</SupportLevel>
               <Descendants>
-                <UIObject ControlType="Hyperlink" Id="UIGobackHyperlink" FriendlyName="Go back" SpecialControlType="None">
+                <UIObject ControlType="Button" Id="UIGoogleSignUpButton" FriendlyName="" SpecialControlType="None">
                   <TechnologyName>UIA</TechnologyName>
                   <WindowTitles>
                     <WindowTitle>Personify</WindowTitle>
                   </WindowTitles>
                   <AndCondition>
-                    <PropertyCondition Name="ControlType">Hyperlink</PropertyCondition>
-                    <PropertyCondition Name="Name">Go back</PropertyCondition>
+                    <PropertyCondition Name="ControlType">Button</PropertyCondition>
+                  </AndCondition>
+                  <SupportLevel>0</SupportLevel>
+                  <Descendants />
+                </UIObject>
+                <UIObject ControlType="Text" Id="UIORText" FriendlyName="or" SpecialControlType="None">
+                  <TechnologyName>UIA</TechnologyName>
+                  <WindowTitles>
+                    <WindowTitle>Personify</WindowTitle>
+                  </WindowTitles>
+                  <AndCondition>
+                    <PropertyCondition Name="ControlType">Text</PropertyCondition>
+                    <PropertyCondition Name="Name">or</PropertyCondition>
+                  </AndCondition>
+                  <SupportLevel>0</SupportLevel>
+                  <Descendants />
+                </UIObject>
+                <UIObject ControlType="Text" Id="UISignUpText" FriendlyName="Sign Up" SpecialControlType="None">
+                  <TechnologyName>UIA</TechnologyName>
+                  <WindowTitles>
+                    <WindowTitle>Personify</WindowTitle>
+                  </WindowTitles>
+                  <AndCondition>
+                    <PropertyCondition Name="ControlType">Text</PropertyCondition>
+                    <PropertyCondition Name="Name">Sign Up</PropertyCondition>
+                  </AndCondition>
+                  <SupportLevel>0</SupportLevel>
+                  <Descendants />
+                </UIObject>
+                <UIObject ControlType="Button" Id="UIAlreadyhaveanaccountButton" FriendlyName="Already have an account? Sign In" SpecialControlType="None">
+                  <TechnologyName>UIA</TechnologyName>
+                  <WindowTitles>
+                    <WindowTitle>Personify</WindowTitle>
+                  </WindowTitles>
+                  <AndCondition>
+                    <PropertyCondition Name="ControlType">Button</PropertyCondition>
+                    <PropertyCondition Name="Name">Already have an account? Sign In</PropertyCondition>
                   </AndCondition>
                   <SupportLevel>0</SupportLevel>
                   <Descendants />
@@ -107,7 +142,7 @@
             </UIObject>
           </Descendants>
         </TopLevelWindow>
-        <TopLevelWindow ControlType="Client" Id="UISignUpFormClient" FriendlyName="" SpecialControlType="None" SessionId="264250">
+        <TopLevelWindow ControlType="Client" Id="UIPersonifySignUpSubForm" FriendlyName="" SpecialControlType="None" SessionId="461118">
           <TechnologyName>MSAA</TechnologyName>
           <WindowTitles />
           <AndCondition Id="SearchCondition">
@@ -116,7 +151,7 @@
           </AndCondition>
           <SupportLevel>1</SupportLevel>
           <Descendants>
-            <UIObject ControlType="Document" Id="UIPersonifyOmniCreateaDocument" FriendlyName="Personify Omni - Create account" SpecialControlType="None">
+            <UIObject ControlType="Document" Id="UIPersonifyOmniCreateDocument" FriendlyName="Personify Omni - Create account" SpecialControlType="None">
               <TechnologyName>Web</TechnologyName>
               <WindowTitles />
               <AndCondition Id="SearchCondition">
@@ -130,12 +165,12 @@
                 <FilterCondition Id="Secondary">
                   <PropertyCondition Name="Title">Personify Omni - Create account</PropertyCondition>
                   <PropertyCondition Name="AbsolutePath">/api/register</PropertyCondition>
-                  <PropertyCondition Name="PageUrl">https://omni.personifyinc.com/api/register</PropertyCondition>
+                  <PropertyCondition Name="PageUrl">https://dev.personifyinc.com/api/register?lang=en-US</PropertyCondition>
                 </FilterCondition>
               </AndCondition>
               <SupportLevel>0</SupportLevel>
               <Descendants>
-                <UIObject ControlType="Pane" Id="UIOmniusersformcontainPane" FriendlyName="omni-users-form-container" SpecialControlType="None">
+                <UIObject ControlType="Pane" Id="UIPersonifySignUpSubPanel" FriendlyName="omni-users-form-container" SpecialControlType="None">
                   <TechnologyName>Web</TechnologyName>
                   <WindowTitles />
                   <AndCondition Id="SearchCondition">
@@ -149,7 +184,7 @@
                       <PropertyCondition Name="InnerText">Sign Up for Personify!
  
    
- First N</PropertyCondition>
+  I agre</PropertyCondition>
                       <PropertyCondition Name="Title" />
                       <PropertyCondition Name="Class" />
                       <PropertyCondition Name="ControlDefinition">id=omni-users-form-container</PropertyCondition>
@@ -203,7 +238,7 @@
                   <SupportLevel>0</SupportLevel>
                   <Descendants />
                 </UIObject>
-                <UIObject ControlType="Edit" Id="UIUserEmailEdit" FriendlyName="User[email]" SpecialControlType="None">
+                <UIObject ControlType="Edit" Id="UIUseremailEdit" FriendlyName="User[email]" SpecialControlType="None">
                   <TechnologyName>Web</TechnologyName>
                   <WindowTitles />
                   <AndCondition Id="SearchCondition">
@@ -225,13 +260,13 @@
                   <SupportLevel>0</SupportLevel>
                   <Descendants />
                 </UIObject>
-                <UIObject ControlType="Edit" Id="UIPasswordplaceholderEdit" FriendlyName="password-placeholder" SpecialControlType="None">
+                <UIObject ControlType="Edit" Id="UIUser_passwordEdit" FriendlyName="User_password" SpecialControlType="None">
                   <TechnologyName>Web</TechnologyName>
                   <WindowTitles />
                   <AndCondition Id="SearchCondition">
                     <AndCondition Id="Primary">
                       <PropertyCondition Name="ControlType">Edit</PropertyCondition>
-                      <PropertyCondition Name="Id">User_password-placeholder</PropertyCondition>
+                      <PropertyCondition Name="Id">User_password</PropertyCondition>
                       <PropertyCondition Name="Name" />
                       <PropertyCondition Name="TagName">INPUT</PropertyCondition>
                       <PropertyCondition Name="LabeledBy" />
@@ -247,13 +282,13 @@
                   <SupportLevel>0</SupportLevel>
                   <Descendants />
                 </UIObject>
-                <UIObject ControlType="Edit" Id="UIRepeatplaceholderEdit" FriendlyName="repeat-placeholder" SpecialControlType="None">
+                <UIObject ControlType="Edit" Id="UIRepeatEdit" FriendlyName="repeat" SpecialControlType="None">
                   <TechnologyName>Web</TechnologyName>
                   <WindowTitles />
                   <AndCondition Id="SearchCondition">
                     <AndCondition Id="Primary">
                       <PropertyCondition Name="ControlType">Edit</PropertyCondition>
-                      <PropertyCondition Name="Id">User_password_repeat-placeholder</PropertyCondition>
+                      <PropertyCondition Name="Id">User_password_repeat</PropertyCondition>
                       <PropertyCondition Name="Name" />
                       <PropertyCondition Name="TagName">INPUT</PropertyCondition>
                       <PropertyCondition Name="LabeledBy" />
@@ -269,28 +304,7 @@
                   <SupportLevel>0</SupportLevel>
                   <Descendants />
                 </UIObject>
-                <UIObject ControlType="Pane" Id="UIFirstNameBlankWarning" FriendlyName="First Name cannot be blank." SpecialControlType="None">
-                  <TechnologyName>Web</TechnologyName>
-                  <WindowTitles />
-                  <AndCondition Id="SearchCondition">
-                    <AndCondition Id="Primary">
-                      <PropertyCondition Name="ControlType">Pane</PropertyCondition>
-                      <PropertyCondition Name="Id">User_first_name_em_</PropertyCondition>
-                      <PropertyCondition Name="Name" />
-                      <PropertyCondition Name="TagName">DIV</PropertyCondition>
-                    </AndCondition>
-                    <FilterCondition Id="Secondary">
-                      <PropertyCondition Name="InnerText">First Name cannot be blank.</PropertyCondition>
-                      <PropertyCondition Name="Title" />
-                      <PropertyCondition Name="Class">errorMessage errorMessaged</PropertyCondition>
-                      <PropertyCondition Name="ControlDefinition">class="errorMessage errorMessaged" id=Us</PropertyCondition>
-                      <PropertyCondition Name="TagInstance">21</PropertyCondition>
-                    </FilterCondition>
-                  </AndCondition>
-                  <SupportLevel>0</SupportLevel>
-                  <Descendants />
-                </UIObject>
-                <UIObject ControlType="CheckBox" Id="UIIagreetotheTermsofSeCheckBox" FriendlyName="I agree to the Terms of Service " SpecialControlType="None">
+                <UIObject ControlType="CheckBox" Id="UIAgreeTermsCheckBox" FriendlyName="I agree to the Terms of Service " SpecialControlType="None">
                   <TechnologyName>Web</TechnologyName>
                   <WindowTitles />
                   <AndCondition Id="SearchCondition">
@@ -347,9 +361,9 @@
                         <FilterCondition Id="Secondary">
                           <PropertyCondition Name="AbsolutePath">/corporate/terms</PropertyCondition>
                           <PropertyCondition Name="Title" />
-                          <PropertyCondition Name="Href">https://omni.personifyinc.com/corporate/terms</PropertyCondition>
+                          <PropertyCondition Name="Href">https://dev.personifyinc.com/corporate/terms</PropertyCondition>
                           <PropertyCondition Name="Class">u</PropertyCondition>
-                          <PropertyCondition Name="ControlDefinition">tabIndex=7 class=u href="/corporate/term</PropertyCondition>
+                          <PropertyCondition Name="ControlDefinition">class=u href="/corporate/terms" target=_</PropertyCondition>
                           <PropertyCondition Name="TagInstance">1</PropertyCondition>
                         </FilterCondition>
                       </AndCondition>
@@ -358,14 +372,14 @@
                     </UIObject>
                   </Descendants>
                 </UIObject>
-                <UIObject ControlType="Button" Id="UICreateyouraccountButton" FriendlyName="Create your account" SpecialControlType="None">
+                <UIObject ControlType="Button" Id="UICreateAccountButton" FriendlyName="Create your account" SpecialControlType="None">
                   <TechnologyName>Web</TechnologyName>
                   <WindowTitles />
                   <AndCondition Id="SearchCondition">
                     <AndCondition Id="Primary">
                       <PropertyCondition Name="ControlType">Button</PropertyCondition>
                       <PropertyCondition Name="Id">register-btn</PropertyCondition>
-                      <PropertyCondition Name="Name">yt0</PropertyCondition>
+                      <PropertyCondition Name="Name">create</PropertyCondition>
                       <PropertyCondition Name="TagName">INPUT</PropertyCondition>
                     </AndCondition>
                     <FilterCondition Id="Secondary">
@@ -373,7 +387,7 @@
                       <PropertyCondition Name="Type">submit</PropertyCondition>
                       <PropertyCondition Name="Title" />
                       <PropertyCondition Name="Class">btn btn-primary inactive is-small-separator disabled</PropertyCondition>
-                      <PropertyCondition Name="ControlDefinition">name=yt0 disabled class="btn btn-primary</PropertyCondition>
+                      <PropertyCondition Name="ControlDefinition">name=create disabled class="btn btn-prim</PropertyCondition>
                       <PropertyCondition Name="TagInstance">11</PropertyCondition>
                     </FilterCondition>
                   </AndCondition>

@@ -1,4 +1,4 @@
-﻿namespace OmniCodedUITest.UIMaps.MainControlPanelClasses
+﻿namespace OmniCodedUITest.UIMaps.InstallerUIMapClasses
 {
     using System;
     using System.Collections.Generic;
@@ -14,8 +14,7 @@
     using MouseButtons = System.Windows.Forms.MouseButtons;
     
     
-    public partial class MainControlPanel
+    public partial class InstallerUIMap
     {
-        
     }
 }

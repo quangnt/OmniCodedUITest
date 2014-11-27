@@ -62,21 +62,6 @@ namespace OmniCodedUITest.UIMaps.LoginUIMapClasses
         }
         
         #region Properties
-        public WpfImage UIPersonifyLogoImage
-        {
-            get
-            {
-                if ((this.mUIPersonifyLogoImage == null))
-                {
-                    this.mUIPersonifyLogoImage = new WpfImage(this);
-                    #region Search Criteria
-                    this.mUIPersonifyLogoImage.WindowTitles.Add("Personify");
-                    #endregion
-                }
-                return this.mUIPersonifyLogoImage;
-            }
-        }
-        
         public WpfButton UICloseButton
         {
             get
@@ -93,72 +78,101 @@ namespace OmniCodedUITest.UIMaps.LoginUIMapClasses
             }
         }
         
-        public WpfButton UIGoogleLoginButton
+        public WpfButton UIPersonifyLoginMainMenu
         {
             get
             {
-                if ((this.mUIGoogleLoginButton == null))
+                if ((this.mUIPersonifyLoginMainMenu == null))
                 {
-                    this.mUIGoogleLoginButton = new WpfButton(this);
+                    this.mUIPersonifyLoginMainMenu = new WpfButton(this);
                     #region Search Criteria
-                    this.mUIGoogleLoginButton.WindowTitles.Add("Personify");
+                    this.mUIPersonifyLoginMainMenu.WindowTitles.Add("Personify");
                     #endregion
                 }
-                return this.mUIGoogleLoginButton;
+                return this.mUIPersonifyLoginMainMenu;
             }
         }
         
-        public UIPersonifyAccountLoginFormCustom UIPersonifyAccountLoginFormCustom
+        public UIPersonifySignInDialog UIPersonifySignInDialog
         {
             get
             {
-                if ((this.mUIPersonifyAccountLoginFormCustom == null))
+                if ((this.mUIPersonifySignInDialog == null))
                 {
-                    this.mUIPersonifyAccountLoginFormCustom = new UIPersonifyAccountLoginFormCustom(this);
+                    this.mUIPersonifySignInDialog = new UIPersonifySignInDialog(this);
                 }
-                return this.mUIPersonifyAccountLoginFormCustom;
+                return this.mUIPersonifySignInDialog;
             }
         }
         #endregion
         
         #region Fields
-        private WpfImage mUIPersonifyLogoImage;
-        
         private WpfButton mUICloseButton;
         
-        private WpfButton mUIGoogleLoginButton;
+        private WpfButton mUIPersonifyLoginMainMenu;
         
-        private UIPersonifyAccountLoginFormCustom mUIPersonifyAccountLoginFormCustom;
+        private UIPersonifySignInDialog mUIPersonifySignInDialog;
         #endregion
     }
     
     [GeneratedCode("Coded UITest Builder", "11.0.50727.1")]
-    public class UIPersonifyAccountLoginFormCustom : WpfCustom
+    public class UIPersonifySignInDialog : WpfCustom
     {
         
-        public UIPersonifyAccountLoginFormCustom(UITestControl searchLimitContainer) : 
+        public UIPersonifySignInDialog(UITestControl searchLimitContainer) : 
                 base(searchLimitContainer)
         {
             #region Search Criteria
-            this.SearchProperties[UITestControl.PropertyNames.ClassName] = "Uia.PersonifyLoginUC";
+            this.SearchProperties[UITestControl.PropertyNames.ClassName] = "Uia.PersonifySignInUC";
             this.WindowTitles.Add("Personify");
             #endregion
         }
         
         #region Properties
-        public WpfText UIUsernameText
+        public WpfText UISignInText
         {
             get
             {
-                if ((this.mUIUsernameText == null))
+                if ((this.mUISignInText == null))
                 {
-                    this.mUIUsernameText = new WpfText(this);
+                    this.mUISignInText = new WpfText(this);
                     #region Search Criteria
-                    this.mUIUsernameText.SearchProperties[WpfText.PropertyNames.AutomationId] = "UsernameWatermark";
-                    this.mUIUsernameText.WindowTitles.Add("Personify");
+                    this.mUISignInText.SearchProperties[WpfText.PropertyNames.Name] = "Sign In";
+                    this.mUISignInText.WindowTitles.Add("Personify");
                     #endregion
                 }
-                return this.mUIUsernameText;
+                return this.mUISignInText;
+            }
+        }
+        
+        public WpfButton UIGoogleSignInButton
+        {
+            get
+            {
+                if ((this.mUIGoogleSignInButton == null))
+                {
+                    this.mUIGoogleSignInButton = new WpfButton(this);
+                    #region Search Criteria
+                    this.mUIGoogleSignInButton.WindowTitles.Add("Personify");
+                    #endregion
+                }
+                return this.mUIGoogleSignInButton;
+            }
+        }
+        
+        public WpfText UIORText
+        {
+            get
+            {
+                if ((this.mUIORText == null))
+                {
+                    this.mUIORText = new WpfText(this);
+                    #region Search Criteria
+                    this.mUIORText.SearchProperties[WpfText.PropertyNames.Name] = "or";
+                    this.mUIORText.WindowTitles.Add("Personify");
+                    #endregion
+                }
+                return this.mUIORText;
             }
         }
         
@@ -178,19 +192,35 @@ namespace OmniCodedUITest.UIMaps.LoginUIMapClasses
             }
         }
         
-        public WpfText UIPasswordText
+        public WpfText UIUsernameIndicator
         {
             get
             {
-                if ((this.mUIPasswordText == null))
+                if ((this.mUIUsernameIndicator == null))
                 {
-                    this.mUIPasswordText = new WpfText(this);
+                    this.mUIUsernameIndicator = new WpfText(this);
                     #region Search Criteria
-                    this.mUIPasswordText.SearchProperties[WpfText.PropertyNames.AutomationId] = "PasswordWatermark";
-                    this.mUIPasswordText.WindowTitles.Add("Personify");
+                    this.mUIUsernameIndicator.SearchProperties[WpfText.PropertyNames.AutomationId] = "UsernameWatermark";
+                    this.mUIUsernameIndicator.WindowTitles.Add("Personify");
                     #endregion
                 }
-                return this.mUIPasswordText;
+                return this.mUIUsernameIndicator;
+            }
+        }
+        
+        public WpfText UIPasswordIndicator
+        {
+            get
+            {
+                if ((this.mUIPasswordIndicator == null))
+                {
+                    this.mUIPasswordIndicator = new WpfText(this);
+                    #region Search Criteria
+                    this.mUIPasswordIndicator.SearchProperties[WpfText.PropertyNames.AutomationId] = "PasswordWatermark";
+                    this.mUIPasswordIndicator.WindowTitles.Add("Personify");
+                    #endregion
+                }
+                return this.mUIPasswordIndicator;
             }
         }
         
@@ -210,83 +240,75 @@ namespace OmniCodedUITest.UIMaps.LoginUIMapClasses
             }
         }
         
-        public UISignUpText UISignUpText
+        public WpfButton UISignInButton
         {
             get
             {
-                if ((this.mUISignUpText == null))
+                if ((this.mUISignInButton == null))
                 {
-                    this.mUISignUpText = new UISignUpText(this);
+                    this.mUISignInButton = new WpfButton(this);
+                    #region Search Criteria
+                    this.mUISignInButton.SearchProperties[WpfButton.PropertyNames.Instance] = "2";
+                    this.mUISignInButton.WindowTitles.Add("Personify");
+                    #endregion
                 }
-                return this.mUISignUpText;
+                return this.mUISignInButton;
             }
         }
         
-        public WpfButton UISigninButton
+        public WpfHyperlink UIForgotPassHyperlink
         {
             get
             {
-                if ((this.mUISigninButton == null))
+                if ((this.mUIForgotPassHyperlink == null))
                 {
-                    this.mUISigninButton = new WpfButton(this);
+                    this.mUIForgotPassHyperlink = new WpfHyperlink(this);
                     #region Search Criteria
-                    this.mUISigninButton.SearchProperties[WpfButton.PropertyNames.Name] = "Sign in";
-                    this.mUISigninButton.WindowTitles.Add("Personify");
+                    this.mUIForgotPassHyperlink.SearchProperties[WpfHyperlink.PropertyNames.Name] = " ";
+                    this.mUIForgotPassHyperlink.WindowTitles.Add("Personify");
                     #endregion
                 }
-                return this.mUISigninButton;
+                return this.mUIForgotPassHyperlink;
+            }
+        }
+        
+        public WpfButton UISignUpButton
+        {
+            get
+            {
+                if ((this.mUISignUpButton == null))
+                {
+                    this.mUISignUpButton = new WpfButton(this);
+                    #region Search Criteria
+                    this.mUISignUpButton.SearchProperties[WpfButton.PropertyNames.Name] = "No account? Sign up, it\'s free!";
+                    this.mUISignUpButton.WindowTitles.Add("Personify");
+                    #endregion
+                }
+                return this.mUISignUpButton;
             }
         }
         #endregion
         
         #region Fields
-        private WpfText mUIUsernameText;
+        private WpfText mUISignInText;
+        
+        private WpfButton mUIGoogleSignInButton;
+        
+        private WpfText mUIORText;
         
         private WpfEdit mUIUsernameEdit;
         
-        private WpfText mUIPasswordText;
+        private WpfText mUIUsernameIndicator;
+        
+        private WpfText mUIPasswordIndicator;
         
         private WpfEdit mUIPasswordEdit;
         
-        private UISignUpText mUISignUpText;
+        private WpfButton mUISignInButton;
         
-        private WpfButton mUISigninButton;
-        #endregion
-    }
-    
-    [GeneratedCode("Coded UITest Builder", "11.0.50727.1")]
-    public class UISignUpText : WpfText
-    {
+        private WpfHyperlink mUIForgotPassHyperlink;
         
-        public UISignUpText(UITestControl searchLimitContainer) : 
-                base(searchLimitContainer)
-        {
-            #region Search Criteria
-            this.SearchProperties[WpfText.PropertyNames.Name] = "Sign Up";
-            this.WindowTitles.Add("Personify");
-            #endregion
-        }
-        
-        #region Properties
-        public WpfHyperlink UISignUpHyperlink
-        {
-            get
-            {
-                if ((this.mUISignUpHyperlink == null))
-                {
-                    this.mUISignUpHyperlink = new WpfHyperlink(this);
-                    #region Search Criteria
-                    this.mUISignUpHyperlink.SearchProperties[WpfHyperlink.PropertyNames.Name] = "Sign Up";
-                    this.mUISignUpHyperlink.WindowTitles.Add("Personify");
-                    #endregion
-                }
-                return this.mUISignUpHyperlink;
-            }
-        }
-        #endregion
-        
-        #region Fields
-        private WpfHyperlink mUISignUpHyperlink;
+        private WpfButton mUISignUpButton;
         #endregion
     }
 }

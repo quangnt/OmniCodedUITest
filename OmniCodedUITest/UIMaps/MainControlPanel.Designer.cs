@@ -30,80 +30,50 @@ namespace OmniCodedUITest.UIMaps.MainControlPanelClasses
     {
         
         #region Properties
-        public UIPersonifyControlPaneWindow UIPersonifyControlPaneWindow
+        public UIMainControlPanel UIMainControlPanel
         {
             get
             {
-                if ((this.mUIPersonifyControlPaneWindow == null))
+                if ((this.mUIMainControlPanel == null))
                 {
-                    this.mUIPersonifyControlPaneWindow = new UIPersonifyControlPaneWindow();
+                    this.mUIMainControlPanel = new UIMainControlPanel();
                 }
-                return this.mUIPersonifyControlPaneWindow;
-            }
-        }
-        
-        public UIYouRecordingWindow UIYouRecordingWindow
-        {
-            get
-            {
-                if ((this.mUIYouRecordingWindow == null))
-                {
-                    this.mUIYouRecordingWindow = new UIYouRecordingWindow();
-                }
-                return this.mUIYouRecordingWindow;
+                return this.mUIMainControlPanel;
             }
         }
         #endregion
         
         #region Fields
-        private UIPersonifyControlPaneWindow mUIPersonifyControlPaneWindow;
-        
-        private UIYouRecordingWindow mUIYouRecordingWindow;
+        private UIMainControlPanel mUIMainControlPanel;
         #endregion
     }
     
     [GeneratedCode("Coded UITest Builder", "11.0.50727.1")]
-    public class UIPersonifyControlPaneWindow : WpfWindow
+    public class UIMainControlPanel : WpfWindow
     {
         
-        public UIPersonifyControlPaneWindow()
+        public UIMainControlPanel()
         {
             #region Search Criteria
-            this.SearchProperties[WpfWindow.PropertyNames.Name] = "Personify Control Panel";
+            this.SearchProperties[WpfWindow.PropertyNames.Name] = "Home";
             this.SearchProperties.Add(new PropertyExpression(WpfWindow.PropertyNames.ClassName, "HwndWrapper", PropertyExpressionOperator.Contains));
-            this.WindowTitles.Add("Personify Control Panel");
+            this.WindowTitles.Add("Home");
             #endregion
         }
         
         #region Properties
-        public WpfImage UIPersonifyLogoImage
+        public WpfButton UIMainMenu
         {
             get
             {
-                if ((this.mUIPersonifyLogoImage == null))
+                if ((this.mUIMainMenu == null))
                 {
-                    this.mUIPersonifyLogoImage = new WpfImage(this);
+                    this.mUIMainMenu = new WpfButton(this);
                     #region Search Criteria
-                    this.mUIPersonifyLogoImage.WindowTitles.Add("Personify Control Panel");
+                    this.mUIMainMenu.WindowTitles.Add("Home");
                     #endregion
                 }
-                return this.mUIPersonifyLogoImage;
-            }
-        }
-        
-        public WpfButton UISettingsButton
-        {
-            get
-            {
-                if ((this.mUISettingsButton == null))
-                {
-                    this.mUISettingsButton = new WpfButton(this);
-                    #region Search Criteria
-                    this.mUISettingsButton.SearchProperties[WpfButton.PropertyNames.HelpText] = "Settings";
-                    this.mUISettingsButton.WindowTitles.Add("Personify Control Panel");
-                    #endregion
-                }
-                return this.mUISettingsButton;
+                return this.mUIMainMenu;
             }
         }
         
@@ -116,718 +86,197 @@ namespace OmniCodedUITest.UIMaps.MainControlPanelClasses
                     this.mUICloseButton = new WpfButton(this);
                     #region Search Criteria
                     this.mUICloseButton.SearchProperties[WpfButton.PropertyNames.HelpText] = "Close";
-                    this.mUICloseButton.WindowTitles.Add("Personify Control Panel");
+                    this.mUICloseButton.WindowTitles.Add("Home");
                     #endregion
                 }
                 return this.mUICloseButton;
             }
         }
         
-        public WpfToggleButton UICollaborationToggleButton
+        public WpfImage UIPersonifyLogo
         {
             get
             {
-                if ((this.mUICollaborationToggleButton == null))
+                if ((this.mUIPersonifyLogo == null))
                 {
-                    this.mUICollaborationToggleButton = new WpfToggleButton(this);
+                    this.mUIPersonifyLogo = new WpfImage(this);
                     #region Search Criteria
-                    this.mUICollaborationToggleButton.WindowTitles.Add("Personify Control Panel");
+                    this.mUIPersonifyLogo.WindowTitles.Add("Home");
                     #endregion
                 }
-                return this.mUICollaborationToggleButton;
+                return this.mUIPersonifyLogo;
             }
         }
         
-        public WpfToggleButton UIRecordingToggleButton
+        public WpfToggleButton UIStartCallToogleButton
         {
             get
             {
-                if ((this.mUIRecordingToggleButton == null))
+                if ((this.mUIStartCallToogleButton == null))
                 {
-                    this.mUIRecordingToggleButton = new WpfToggleButton(this);
+                    this.mUIStartCallToogleButton = new WpfToggleButton(this);
                     #region Search Criteria
-                    this.mUIRecordingToggleButton.SearchProperties[WpfToggleButton.PropertyNames.Instance] = "2";
-                    this.mUIRecordingToggleButton.WindowTitles.Add("Personify Control Panel");
+                    this.mUIStartCallToogleButton.SearchProperties[WpfToggleButton.PropertyNames.AutomationId] = "start_call_btn";
+                    this.mUIStartCallToogleButton.WindowTitles.Add("Home");
                     #endregion
                 }
-                return this.mUIRecordingToggleButton;
+                return this.mUIStartCallToogleButton;
             }
         }
         
-        public UIStartCallCustom UIStartCallCustom
+        public WpfToggleButton UIJoinCallToggleButton
         {
             get
             {
-                if ((this.mUIStartCallCustom == null))
+                if ((this.mUIJoinCallToggleButton == null))
                 {
-                    this.mUIStartCallCustom = new UIStartCallCustom(this);
+                    this.mUIJoinCallToggleButton = new WpfToggleButton(this);
+                    #region Search Criteria
+                    this.mUIJoinCallToggleButton.SearchProperties[WpfToggleButton.PropertyNames.AutomationId] = "join_call_btn";
+                    this.mUIJoinCallToggleButton.WindowTitles.Add("Home");
+                    #endregion
                 }
-                return this.mUIStartCallCustom;
+                return this.mUIJoinCallToggleButton;
             }
         }
         
-        public UIJoinCallCustom UIJoinCallCustom
+        public WpfToggleButton UIScreenRecordingToggleButton
         {
             get
             {
-                if ((this.mUIJoinCallCustom == null))
+                if ((this.mUIScreenRecordingToggleButton == null))
                 {
-                    this.mUIJoinCallCustom = new UIJoinCallCustom(this);
+                    this.mUIScreenRecordingToggleButton = new WpfToggleButton(this);
+                    #region Search Criteria
+                    this.mUIScreenRecordingToggleButton.SearchProperties[WpfToggleButton.PropertyNames.AutomationId] = "screen_recording_btn";
+                    this.mUIScreenRecordingToggleButton.WindowTitles.Add("Home");
+                    #endregion
                 }
-                return this.mUIJoinCallCustom;
+                return this.mUIScreenRecordingToggleButton;
             }
         }
         
-        public UISettingsCustom UISettingsCustom
+        public WpfButton UINewCallButton
         {
             get
             {
-                if ((this.mUISettingsCustom == null))
+                if ((this.mUINewCallButton == null))
                 {
-                    this.mUISettingsCustom = new UISettingsCustom(this);
+                    this.mUINewCallButton = new WpfButton(this);
+                    #region Search Criteria
+                    this.mUINewCallButton.SearchProperties[WpfButton.PropertyNames.HelpText] = "New Call";
+                    this.mUINewCallButton.WindowTitles.Add("Home");
+                    #endregion
                 }
-                return this.mUISettingsCustom;
+                return this.mUINewCallButton;
+            }
+        }
+        
+        public WpfButton UIRecentCallsButton
+        {
+            get
+            {
+                if ((this.mUIRecentCallsButton == null))
+                {
+                    this.mUIRecentCallsButton = new WpfButton(this);
+                    #region Search Criteria
+                    this.mUIRecentCallsButton.SearchProperties[WpfButton.PropertyNames.HelpText] = "Recent Calls";
+                    this.mUIRecentCallsButton.WindowTitles.Add("Home");
+                    #endregion
+                }
+                return this.mUIRecentCallsButton;
+            }
+        }
+        
+        public WpfImage UIPasteMeetingIcon
+        {
+            get
+            {
+                if ((this.mUIPasteMeetingIcon == null))
+                {
+                    this.mUIPasteMeetingIcon = new WpfImage(this);
+                    #region Search Criteria
+                    this.mUIPasteMeetingIcon.SearchProperties[WpfImage.PropertyNames.Instance] = "2";
+                    this.mUIPasteMeetingIcon.WindowTitles.Add("Home");
+                    #endregion
+                }
+                return this.mUIPasteMeetingIcon;
+            }
+        }
+        
+        public WpfText UIMeetingLinkEdit
+        {
+            get
+            {
+                if ((this.mUIMeetingLinkEdit == null))
+                {
+                    this.mUIMeetingLinkEdit = new WpfText(this);
+                    #region Search Criteria
+                    this.mUIMeetingLinkEdit.SearchProperties[WpfText.PropertyNames.AutomationId] = "UsernameWatermark";
+                    this.mUIMeetingLinkEdit.WindowTitles.Add("Home");
+                    #endregion
+                }
+                return this.mUIMeetingLinkEdit;
+            }
+        }
+        
+        public WpfButton UINewRecordingButton
+        {
+            get
+            {
+                if ((this.mUINewRecordingButton == null))
+                {
+                    this.mUINewRecordingButton = new WpfButton(this);
+                    #region Search Criteria
+                    this.mUINewRecordingButton.SearchProperties[WpfButton.PropertyNames.HelpText] = "New Recording";
+                    this.mUINewRecordingButton.WindowTitles.Add("Home");
+                    #endregion
+                }
+                return this.mUINewRecordingButton;
+            }
+        }
+        
+        public WpfButton UIPreviousButton
+        {
+            get
+            {
+                if ((this.mUIPreviousButton == null))
+                {
+                    this.mUIPreviousButton = new WpfButton(this);
+                    #region Search Criteria
+                    this.mUIPreviousButton.SearchProperties[WpfButton.PropertyNames.HelpText] = "Previous";
+                    this.mUIPreviousButton.WindowTitles.Add("Home");
+                    #endregion
+                }
+                return this.mUIPreviousButton;
             }
         }
         #endregion
         
         #region Fields
-        private WpfImage mUIPersonifyLogoImage;
-        
-        private WpfButton mUISettingsButton;
+        private WpfButton mUIMainMenu;
         
         private WpfButton mUICloseButton;
         
-        private WpfToggleButton mUICollaborationToggleButton;
+        private WpfImage mUIPersonifyLogo;
         
-        private WpfToggleButton mUIRecordingToggleButton;
+        private WpfToggleButton mUIStartCallToogleButton;
         
-        private UIStartCallCustom mUIStartCallCustom;
+        private WpfToggleButton mUIJoinCallToggleButton;
         
-        private UIJoinCallCustom mUIJoinCallCustom;
+        private WpfToggleButton mUIScreenRecordingToggleButton;
         
-        private UISettingsCustom mUISettingsCustom;
-        #endregion
-    }
-    
-    [GeneratedCode("Coded UITest Builder", "11.0.50727.1")]
-    public class UIStartCallCustom : WpfCustom
-    {
+        private WpfButton mUINewCallButton;
         
-        public UIStartCallCustom(UITestControl searchLimitContainer) : 
-                base(searchLimitContainer)
-        {
-            #region Search Criteria
-            this.SearchProperties[UITestControl.PropertyNames.ClassName] = "Uia.SimpleCollaborateUC";
-            this.WindowTitles.Add("Personify Control Panel");
-            #endregion
-        }
+        private WpfButton mUIRecentCallsButton;
         
-        #region Properties
-        public UIStartCustom UIStartCustom
-        {
-            get
-            {
-                if ((this.mUIStartCustom == null))
-                {
-                    this.mUIStartCustom = new UIStartCustom(this);
-                }
-                return this.mUIStartCustom;
-            }
-        }
-        #endregion
+        private WpfImage mUIPasteMeetingIcon;
         
-        #region Fields
-        private UIStartCustom mUIStartCustom;
-        #endregion
-    }
-    
-    [GeneratedCode("Coded UITest Builder", "11.0.50727.1")]
-    public class UIStartCustom : WpfCustom
-    {
+        private WpfText mUIMeetingLinkEdit;
         
-        public UIStartCustom(UITestControl searchLimitContainer) : 
-                base(searchLimitContainer)
-        {
-            #region Search Criteria
-            this.SearchProperties[UITestControl.PropertyNames.ClassName] = "Uia.CollabTabUC";
-            this.WindowTitles.Add("Personify Control Panel");
-            #endregion
-        }
+        private WpfButton mUINewRecordingButton;
         
-        #region Properties
-        public WpfButton UIStartcallButton
-        {
-            get
-            {
-                if ((this.mUIStartcallButton == null))
-                {
-                    this.mUIStartcallButton = new WpfButton(this);
-                    #region Search Criteria
-                    this.mUIStartcallButton.SearchProperties[WpfButton.PropertyNames.Name] = "Start call";
-                    this.mUIStartcallButton.WindowTitles.Add("Personify Control Panel");
-                    #endregion
-                }
-                return this.mUIStartcallButton;
-            }
-        }
-        #endregion
-        
-        #region Fields
-        private WpfButton mUIStartcallButton;
-        #endregion
-    }
-    
-    [GeneratedCode("Coded UITest Builder", "11.0.50727.1")]
-    public class UIJoinCallCustom : WpfCustom
-    {
-        
-        public UIJoinCallCustom(UITestControl searchLimitContainer) : 
-                base(searchLimitContainer)
-        {
-            #region Search Criteria
-            this.SearchProperties[UITestControl.PropertyNames.ClassName] = "Uia.CollabTabUC";
-            this.WindowTitles.Add("Personify Control Panel");
-            #endregion
-        }
-        
-        #region Properties
-        public UIPART_TextEdit UIPART_TextEdit
-        {
-            get
-            {
-                if ((this.mUIPART_TextEdit == null))
-                {
-                    this.mUIPART_TextEdit = new UIPART_TextEdit(this);
-                }
-                return this.mUIPART_TextEdit;
-            }
-        }
-        #endregion
-        
-        #region Fields
-        private UIPART_TextEdit mUIPART_TextEdit;
-        #endregion
-    }
-    
-    [GeneratedCode("Coded UITest Builder", "11.0.50727.1")]
-    public class UIPART_TextEdit : WpfEdit
-    {
-        
-        public UIPART_TextEdit(UITestControl searchLimitContainer) : 
-                base(searchLimitContainer)
-        {
-            #region Search Criteria
-            this.SearchProperties[WpfEdit.PropertyNames.AutomationId] = "PART_Text";
-            this.WindowTitles.Add("Personify Control Panel");
-            #endregion
-        }
-        
-        #region Properties
-        public WpfButton UIJoinCallButton
-        {
-            get
-            {
-                if ((this.mUIJoinCallButton == null))
-                {
-                    this.mUIJoinCallButton = new WpfButton(this);
-                    #region Search Criteria
-                    this.mUIJoinCallButton.SearchConfigurations.Add(SearchConfiguration.NextSibling);
-                    this.mUIJoinCallButton.WindowTitles.Add("Personify Control Panel");
-                    #endregion
-                }
-                return this.mUIJoinCallButton;
-            }
-        }
-        #endregion
-        
-        #region Fields
-        private WpfButton mUIJoinCallButton;
-        #endregion
-    }
-    
-    [GeneratedCode("Coded UITest Builder", "11.0.50727.1")]
-    public class UISettingsCustom : WpfCustom
-    {
-        
-        public UISettingsCustom(UITestControl searchLimitContainer) : 
-                base(searchLimitContainer)
-        {
-            #region Search Criteria
-            this.SearchProperties[UITestControl.PropertyNames.ClassName] = "Uia.SettingsUC";
-            this.WindowTitles.Add("Personify Control Panel");
-            #endregion
-        }
-        
-        #region Properties
-        public WpfText UISettingsText
-        {
-            get
-            {
-                if ((this.mUISettingsText == null))
-                {
-                    this.mUISettingsText = new WpfText(this);
-                    #region Search Criteria
-                    this.mUISettingsText.SearchProperties[WpfText.PropertyNames.Name] = "Settings";
-                    this.mUISettingsText.WindowTitles.Add("Personify Control Panel");
-                    #endregion
-                }
-                return this.mUISettingsText;
-            }
-        }
-        
-        public WpfButton UICloseButton
-        {
-            get
-            {
-                if ((this.mUICloseButton == null))
-                {
-                    this.mUICloseButton = new WpfButton(this);
-                    #region Search Criteria
-                    this.mUICloseButton.SearchProperties[WpfButton.PropertyNames.HelpText] = "Close";
-                    this.mUICloseButton.WindowTitles.Add("Personify Control Panel");
-                    #endregion
-                }
-                return this.mUICloseButton;
-            }
-        }
-        
-        public WpfText UIPthphienText
-        {
-            get
-            {
-                if ((this.mUIPthphienText == null))
-                {
-                    this.mUIPthphienText = new WpfText(this);
-                    #region Search Criteria
-                    this.mUIPthphienText.SearchProperties[WpfText.PropertyNames.Name] = "pthphien";
-                    this.mUIPthphienText.WindowTitles.Add("Personify Control Panel");
-                    #endregion
-                }
-                return this.mUIPthphienText;
-            }
-        }
-        
-        public UIDEVICESGroup UIDEVICESGroup
-        {
-            get
-            {
-                if ((this.mUIDEVICESGroup == null))
-                {
-                    this.mUIDEVICESGroup = new UIDEVICESGroup(this);
-                }
-                return this.mUIDEVICESGroup;
-            }
-        }
-        
-        public UINeedHelpText UINeedHelpText
-        {
-            get
-            {
-                if ((this.mUINeedHelpText == null))
-                {
-                    this.mUINeedHelpText = new UINeedHelpText(this);
-                }
-                return this.mUINeedHelpText;
-            }
-        }
-        
-        public WpfButton UISignOutButton
-        {
-            get
-            {
-                if ((this.mUISignOutButton == null))
-                {
-                    this.mUISignOutButton = new WpfButton(this);
-                    #region Search Criteria
-                    this.mUISignOutButton.SearchProperties[WpfButton.PropertyNames.Name] = "Sign Out";
-                    this.mUISignOutButton.WindowTitles.Add("Personify Control Panel");
-                    #endregion
-                }
-                return this.mUISignOutButton;
-            }
-        }
-        
-        public WpfText UIVersion2350Text
-        {
-            get
-            {
-                if ((this.mUIVersion2350Text == null))
-                {
-                    this.mUIVersion2350Text = new WpfText(this);
-                    #region Search Criteria
-                    this.mUIVersion2350Text.SearchProperties[WpfText.PropertyNames.Name] = "Version 2.3.5.0";
-                    this.mUIVersion2350Text.WindowTitles.Add("Personify Control Panel");
-                    #endregion
-                }
-                return this.mUIVersion2350Text;
-            }
-        }
-        
-        public UIViewLicensesText UIViewLicensesText
-        {
-            get
-            {
-                if ((this.mUIViewLicensesText == null))
-                {
-                    this.mUIViewLicensesText = new UIViewLicensesText(this);
-                }
-                return this.mUIViewLicensesText;
-            }
-        }
-        #endregion
-        
-        #region Fields
-        private WpfText mUISettingsText;
-        
-        private WpfButton mUICloseButton;
-        
-        private WpfText mUIPthphienText;
-        
-        private UIDEVICESGroup mUIDEVICESGroup;
-        
-        private UINeedHelpText mUINeedHelpText;
-        
-        private WpfButton mUISignOutButton;
-        
-        private WpfText mUIVersion2350Text;
-        
-        private UIViewLicensesText mUIViewLicensesText;
-        #endregion
-    }
-    
-    [GeneratedCode("Coded UITest Builder", "11.0.50727.1")]
-    public class UIDEVICESGroup : WpfGroup
-    {
-        
-        public UIDEVICESGroup(UITestControl searchLimitContainer) : 
-                base(searchLimitContainer)
-        {
-            #region Search Criteria
-            this.SearchProperties[WpfGroup.PropertyNames.Name] = "DEVICES";
-            this.WindowTitles.Add("Personify Control Panel");
-            #endregion
-        }
-        
-        #region Properties
-        public WpfText UIDEVICESText
-        {
-            get
-            {
-                if ((this.mUIDEVICESText == null))
-                {
-                    this.mUIDEVICESText = new WpfText(this);
-                    #region Search Criteria
-                    this.mUIDEVICESText.SearchProperties[WpfText.PropertyNames.Name] = "DEVICES";
-                    this.mUIDEVICESText.WindowTitles.Add("Personify Control Panel");
-                    #endregion
-                }
-                return this.mUIDEVICESText;
-            }
-        }
-        
-        public WpfText UIMicrophoneText
-        {
-            get
-            {
-                if ((this.mUIMicrophoneText == null))
-                {
-                    this.mUIMicrophoneText = new WpfText(this);
-                    #region Search Criteria
-                    this.mUIMicrophoneText.SearchProperties[WpfText.PropertyNames.Name] = "Microphone";
-                    this.mUIMicrophoneText.WindowTitles.Add("Personify Control Panel");
-                    #endregion
-                }
-                return this.mUIMicrophoneText;
-            }
-        }
-        
-        public WpfComboBox UIMicrophoneComboBox
-        {
-            get
-            {
-                if ((this.mUIMicrophoneComboBox == null))
-                {
-                    this.mUIMicrophoneComboBox = new WpfComboBox(this);
-                    #region Search Criteria
-                    this.mUIMicrophoneComboBox.WindowTitles.Add("Personify Control Panel");
-                    #endregion
-                }
-                return this.mUIMicrophoneComboBox;
-            }
-        }
-        
-        public WpfText UISpeakerText
-        {
-            get
-            {
-                if ((this.mUISpeakerText == null))
-                {
-                    this.mUISpeakerText = new WpfText(this);
-                    #region Search Criteria
-                    this.mUISpeakerText.SearchProperties[WpfText.PropertyNames.Name] = "Speaker";
-                    this.mUISpeakerText.WindowTitles.Add("Personify Control Panel");
-                    #endregion
-                }
-                return this.mUISpeakerText;
-            }
-        }
-        
-        public WpfComboBox UISpearkersComboBox
-        {
-            get
-            {
-                if ((this.mUISpearkersComboBox == null))
-                {
-                    this.mUISpearkersComboBox = new WpfComboBox(this);
-                    #region Search Criteria
-                    this.mUISpearkersComboBox.SearchProperties[WpfComboBox.PropertyNames.Instance] = "2";
-                    this.mUISpearkersComboBox.WindowTitles.Add("Personify Control Panel");
-                    #endregion
-                }
-                return this.mUISpearkersComboBox;
-            }
-        }
-        
-        public UIWebcamText UIWebcamText
-        {
-            get
-            {
-                if ((this.mUIWebcamText == null))
-                {
-                    this.mUIWebcamText = new UIWebcamText(this);
-                }
-                return this.mUIWebcamText;
-            }
-        }
-        #endregion
-        
-        #region Fields
-        private WpfText mUIDEVICESText;
-        
-        private WpfText mUIMicrophoneText;
-        
-        private WpfComboBox mUIMicrophoneComboBox;
-        
-        private WpfText mUISpeakerText;
-        
-        private WpfComboBox mUISpearkersComboBox;
-        
-        private UIWebcamText mUIWebcamText;
-        #endregion
-    }
-    
-    [GeneratedCode("Coded UITest Builder", "11.0.50727.1")]
-    public class UIWebcamText : WpfText
-    {
-        
-        public UIWebcamText(UITestControl searchLimitContainer) : 
-                base(searchLimitContainer)
-        {
-            #region Search Criteria
-            this.SearchProperties[WpfText.PropertyNames.Name] = "Webcam";
-            this.WindowTitles.Add("Personify Control Panel");
-            #endregion
-        }
-        
-        #region Properties
-        public WpfComboBox UIWebcamComboBox
-        {
-            get
-            {
-                if ((this.mUIWebcamComboBox == null))
-                {
-                    this.mUIWebcamComboBox = new WpfComboBox(this);
-                    #region Search Criteria
-                    this.mUIWebcamComboBox.SearchProperties[WpfComboBox.PropertyNames.Instance] = "3";
-                    this.mUIWebcamComboBox.SearchConfigurations.Add(SearchConfiguration.NextSibling);
-                    this.mUIWebcamComboBox.WindowTitles.Add("Personify Control Panel");
-                    #endregion
-                }
-                return this.mUIWebcamComboBox;
-            }
-        }
-        #endregion
-        
-        #region Fields
-        private WpfComboBox mUIWebcamComboBox;
-        #endregion
-    }
-    
-    [GeneratedCode("Coded UITest Builder", "11.0.50727.1")]
-    public class UINeedHelpText : WpfText
-    {
-        
-        public UINeedHelpText(UITestControl searchLimitContainer) : 
-                base(searchLimitContainer)
-        {
-            #region Search Criteria
-            this.SearchProperties[WpfText.PropertyNames.Name] = "Need Help?";
-            this.WindowTitles.Add("Personify Control Panel");
-            #endregion
-        }
-        
-        #region Properties
-        public WpfHyperlink UINeedHelpHyperlink
-        {
-            get
-            {
-                if ((this.mUINeedHelpHyperlink == null))
-                {
-                    this.mUINeedHelpHyperlink = new WpfHyperlink(this);
-                    #region Search Criteria
-                    this.mUINeedHelpHyperlink.SearchProperties[WpfHyperlink.PropertyNames.Name] = "Need Help?";
-                    this.mUINeedHelpHyperlink.WindowTitles.Add("Personify Control Panel");
-                    #endregion
-                }
-                return this.mUINeedHelpHyperlink;
-            }
-        }
-        #endregion
-        
-        #region Fields
-        private WpfHyperlink mUINeedHelpHyperlink;
-        #endregion
-    }
-    
-    [GeneratedCode("Coded UITest Builder", "11.0.50727.1")]
-    public class UIViewLicensesText : WpfText
-    {
-        
-        public UIViewLicensesText(UITestControl searchLimitContainer) : 
-                base(searchLimitContainer)
-        {
-            #region Search Criteria
-            this.SearchProperties[WpfText.PropertyNames.Name] = "View Licenses";
-            this.WindowTitles.Add("Personify Control Panel");
-            #endregion
-        }
-        
-        #region Properties
-        public WpfHyperlink UIViewLicensesHyperlink
-        {
-            get
-            {
-                if ((this.mUIViewLicensesHyperlink == null))
-                {
-                    this.mUIViewLicensesHyperlink = new WpfHyperlink(this);
-                    #region Search Criteria
-                    this.mUIViewLicensesHyperlink.SearchProperties[WpfHyperlink.PropertyNames.Name] = "View Licenses";
-                    this.mUIViewLicensesHyperlink.WindowTitles.Add("Personify Control Panel");
-                    #endregion
-                }
-                return this.mUIViewLicensesHyperlink;
-            }
-        }
-        #endregion
-        
-        #region Fields
-        private WpfHyperlink mUIViewLicensesHyperlink;
-        #endregion
-    }
-    
-    [GeneratedCode("Coded UITest Builder", "11.0.50727.1")]
-    public class UIYouRecordingWindow : WpfWindow
-    {
-        
-        public UIYouRecordingWindow()
-        {
-            #region Search Criteria
-            this.SearchProperties[WpfWindow.PropertyNames.Name] = "You";
-            this.SearchProperties.Add(new PropertyExpression(WpfWindow.PropertyNames.ClassName, "HwndWrapper", PropertyExpressionOperator.Contains));
-            this.WindowTitles.Add("You");
-            #endregion
-        }
-        
-        #region Properties
-        public WpfImage UILocalUserImageImage
-        {
-            get
-            {
-                if ((this.mUILocalUserImageImage == null))
-                {
-                    this.mUILocalUserImageImage = new WpfImage(this);
-                    #region Search Criteria
-                    this.mUILocalUserImageImage.SearchProperties[WpfImage.PropertyNames.AutomationId] = "LocalUserImage";
-                    this.mUILocalUserImageImage.WindowTitles.Add("You");
-                    #endregion
-                }
-                return this.mUILocalUserImageImage;
-            }
-        }
-        
-        public WpfImage UILocalUserWatermarkImage
-        {
-            get
-            {
-                if ((this.mUILocalUserWatermarkImage == null))
-                {
-                    this.mUILocalUserWatermarkImage = new WpfImage(this);
-                    #region Search Criteria
-                    this.mUILocalUserWatermarkImage.SearchProperties[WpfImage.PropertyNames.AutomationId] = "LocalUserWatermark";
-                    this.mUILocalUserWatermarkImage.WindowTitles.Add("You");
-                    #endregion
-                }
-                return this.mUILocalUserWatermarkImage;
-            }
-        }
-        
-        public UIMPersonaResizerSlider UIMPersonaResizerSlider
-        {
-            get
-            {
-                if ((this.mUIMPersonaResizerSlider == null))
-                {
-                    this.mUIMPersonaResizerSlider = new UIMPersonaResizerSlider(this);
-                }
-                return this.mUIMPersonaResizerSlider;
-            }
-        }
-        #endregion
-        
-        #region Fields
-        private WpfImage mUILocalUserImageImage;
-        
-        private WpfImage mUILocalUserWatermarkImage;
-        
-        private UIMPersonaResizerSlider mUIMPersonaResizerSlider;
-        #endregion
-    }
-    
-    [GeneratedCode("Coded UITest Builder", "11.0.50727.1")]
-    public class UIMPersonaResizerSlider : WpfSlider
-    {
-        
-        public UIMPersonaResizerSlider(UITestControl searchLimitContainer) : 
-                base(searchLimitContainer)
-        {
-            #region Search Criteria
-            this.SearchProperties[WpfSlider.PropertyNames.AutomationId] = "mPersonaResizer";
-            this.WindowTitles.Add("You");
-            #endregion
-        }
-        
-        #region Properties
-        public WpfControl UIThumbIndicator
-        {
-            get
-            {
-                if ((this.mUIThumbIndicator == null))
-                {
-                    this.mUIThumbIndicator = new WpfControl(this);
-                    #region Search Criteria
-                    this.mUIThumbIndicator.SearchProperties[UITestControl.PropertyNames.ControlType] = "Indicator";
-                    this.mUIThumbIndicator.SearchProperties["AutomationId"] = "Thumb";
-                    this.mUIThumbIndicator.WindowTitles.Add("You");
-                    #endregion
-                }
-                return this.mUIThumbIndicator;
-            }
-        }
-        #endregion
-        
-        #region Fields
-        private WpfControl mUIThumbIndicator;
+        private WpfButton mUIPreviousButton;
         #endregion
     }
 }
