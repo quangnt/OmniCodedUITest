@@ -16,14 +16,18 @@
     
     public partial class LoginUIMap
     {
-        public Boolean Login(string sname, string spass)
+        
+
+        // Perform login with Personify account
+        public void PersonifyLogin(string sname, string spass)
         {
             this.UIPersonifyMainLoginWindow.UIPersonifySignInDialog.UIUsernameEdit.Text = sname;
             this.UIPersonifyMainLoginWindow.UIPersonifySignInDialog.UIPasswordEdit.Text = spass;
             Mouse.Click(this.UIPersonifyMainLoginWindow.UIPersonifySignInDialog.UISignInButton);
-            //this.UIPersonifyMainLoginWindow.UIPersonifySignInDialog.UIWarning.GetProperty("IsOffscreen");
-            return true;
         }
+
+        
+
     }
 
 }

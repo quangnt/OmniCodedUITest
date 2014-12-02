@@ -141,18 +141,36 @@ namespace OmniCodedUITest
             {
                 videoCallControlPanel = value;
             }
+
         }
+       
         #endregion
 
 
         #region Helper methods
         public void login(string sname, string spass)
         {
-            mainLogin.Login(sname, spass);
+            mainLogin.PersonifyLogin(sname, spass);
         }
+
+        public void Login(Boolean signedGoogle, string type, string sname, string spass)
+        {
+            switch (type)
+            {
+                case "personify":
+                    mainLogin.PersonifyLogin(sname, spass);
+                    break;
+                case "google":
+                    googleLogin.GoogleLogin(signedGoogle, sname, spass);
+                    break;
+            }
+
+            //this.UIPersonifyMainLoginWindow.UIPersonifySignInDialog.UIWarning.GetProperty("IsOffscreen");
+        }
+
         public void chat()
         {
-            personifyMainControlPanelObject.Chat("adfbsd");
+            //personifyMainControlPanelObject.Chat("adfbsd");
 
         }
         #endregion

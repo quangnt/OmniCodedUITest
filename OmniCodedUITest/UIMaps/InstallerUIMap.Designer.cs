@@ -98,15 +98,19 @@ namespace OmniCodedUITest.UIMaps.InstallerUIMapClasses
             }
         }
         
-        public UIItemWindow1 UIItemWindow1
+        public WinWindow UIEulaWindow
         {
             get
             {
-                if ((this.mUIItemWindow1 == null))
+                if ((this.mUIEulaWindow == null))
                 {
-                    this.mUIItemWindow1 = new UIItemWindow1(this);
+                    this.mUIEulaWindow = new WinWindow(this);
+                    #region Search Criteria
+                    this.mUIEulaWindow.SearchProperties[WinWindow.PropertyNames.ControlId] = "1000";
+                    this.mUIEulaWindow.WindowTitles.Add("Personify Setup ");
+                    #endregion
                 }
-                return this.mUIItemWindow1;
+                return this.mUIEulaWindow;
             }
         }
         
@@ -146,15 +150,15 @@ namespace OmniCodedUITest.UIMaps.InstallerUIMapClasses
             }
         }
         
-        public UIItemWindow2 UIItemWindow2
+        public UIProgressbarWindow UIProgressbarWindow
         {
             get
             {
-                if ((this.mUIItemWindow2 == null))
+                if ((this.mUIProgressbarWindow == null))
                 {
-                    this.mUIItemWindow2 = new UIItemWindow2(this);
+                    this.mUIProgressbarWindow = new UIProgressbarWindow(this);
                 }
-                return this.mUIItemWindow2;
+                return this.mUIProgressbarWindow;
             }
         }
         
@@ -190,7 +194,7 @@ namespace OmniCodedUITest.UIMaps.InstallerUIMapClasses
         
         private UIPleasereviewthelicenWindow mUIPleasereviewthelicenWindow;
         
-        private UIItemWindow1 mUIItemWindow1;
+        private WinWindow mUIEulaWindow;
         
         private UIPersonifySetupTitleBar mUIPersonifySetupTitleBar;
         
@@ -198,7 +202,7 @@ namespace OmniCodedUITest.UIMaps.InstallerUIMapClasses
         
         private UICancelWindow mUICancelWindow;
         
-        private UIItemWindow2 mUIItemWindow2;
+        private UIProgressbarWindow mUIProgressbarWindow;
         
         private UIShowdetailsWindow mUIShowdetailsWindow;
         
@@ -312,42 +316,6 @@ namespace OmniCodedUITest.UIMaps.InstallerUIMapClasses
         
         #region Fields
         private WinText mUIPleasereviewthelicenText;
-        #endregion
-    }
-    
-    [GeneratedCode("Coded UITest Builder", "11.0.50727.1")]
-    public class UIItemWindow1 : WinWindow
-    {
-        
-        public UIItemWindow1(UITestControl searchLimitContainer) : 
-                base(searchLimitContainer)
-        {
-            #region Search Criteria
-            this.SearchProperties[WinWindow.PropertyNames.ControlId] = "1000";
-            this.WindowTitles.Add("Personify Setup ");
-            #endregion
-        }
-        
-        #region Properties
-        public WinEdit UIPressPageDowntoseethEdit
-        {
-            get
-            {
-                if ((this.mUIPressPageDowntoseethEdit == null))
-                {
-                    this.mUIPressPageDowntoseethEdit = new WinEdit(this);
-                    #region Search Criteria
-                    this.mUIPressPageDowntoseethEdit.SearchProperties[WinEdit.PropertyNames.Name] = "Press Page Down to see the rest of the agreement.";
-                    this.mUIPressPageDowntoseethEdit.WindowTitles.Add("Personify Setup ");
-                    #endregion
-                }
-                return this.mUIPressPageDowntoseethEdit;
-            }
-        }
-        #endregion
-        
-        #region Fields
-        private WinEdit mUIPressPageDowntoseethEdit;
         #endregion
     }
     
@@ -513,10 +481,10 @@ namespace OmniCodedUITest.UIMaps.InstallerUIMapClasses
     }
     
     [GeneratedCode("Coded UITest Builder", "11.0.50727.1")]
-    public class UIItemWindow2 : WinWindow
+    public class UIProgressbarWindow : WinWindow
     {
         
-        public UIItemWindow2(UITestControl searchLimitContainer) : 
+        public UIProgressbarWindow(UITestControl searchLimitContainer) : 
                 base(searchLimitContainer)
         {
             #region Search Criteria

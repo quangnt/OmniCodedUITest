@@ -16,24 +16,35 @@ namespace OmniCodedUITest
     /// Summary description for CodedUITest2
     /// </summary>
     [CodedUITest]
-    public class CodedUITest2
+    public class TestExample
     {
         OmniBaseInterface omniinterface = new OmniBaseInterface();
 
-        public CodedUITest2()
+        public TestExample()
         {
 
         }
 
         [TestMethod]
+        [DeploymentItem("Configuration.xml")]
         public void CodedUITestMethod1()
         {
             // To generate code for this test, select "Generate Code for Coded UI Test" from the shortcut menu and select one of the menu items.
             // For more information on generated code, see http://go.microsoft.com/fwlink/?LinkId=179463
-            omniinterface.login("quang.nt@personifyinc.com","123456");
+            string temp1 = omniinterface.personifyInstallerObject.InstalledPathObject;
+            string temp2 = omniinterface.personifyInstallerObject.InstallerPathObject;
+            return;         
+
 
         }
 
+        [TestMethod]
+        public void CodedUTestMethod2() 
+        {
+            string temp1 = omniinterface.personifyInstallerObject.InstalledPathObject;
+            string temp2 = omniinterface.personifyInstallerObject.InstallerPathObject;
+            return;  
+        }
         #region Additional test attributes
 
         // You can use the following additional attributes as you write your tests:

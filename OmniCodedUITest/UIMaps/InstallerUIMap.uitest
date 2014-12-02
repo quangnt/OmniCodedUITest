@@ -150,7 +150,7 @@
                 </UIObject>
               </Descendants>
             </UIObject>
-            <UIObject ControlType="Window" Id="UIItemWindow1" FriendlyName="" SpecialControlType="None">
+            <UIObject ControlType="Window" Id="UIEulaWindow" FriendlyName="" SpecialControlType="None">
               <TechnologyName>MSAA</TechnologyName>
               <WindowTitles>
                 <WindowTitle>Personify Setup </WindowTitle>
@@ -163,23 +163,7 @@
                 <PropertyCondition Name="ControlType">Window</PropertyCondition>
               </AndCondition>
               <SupportLevel>1</SupportLevel>
-              <Descendants>
-                <UIObject ControlType="Edit" Id="UIPressPageDowntoseethEdit" FriendlyName="Press Page Down to see the rest of the agreement." SpecialControlType="None">
-                  <TechnologyName>MSAA</TechnologyName>
-                  <WindowTitles>
-                    <WindowTitle>Personify Setup </WindowTitle>
-                  </WindowTitles>
-                  <SearchConfigurations>
-                    <SearchConfiguration>VisibleOnly</SearchConfiguration>
-                  </SearchConfigurations>
-                  <AndCondition Id="SearchCondition">
-                    <PropertyCondition Name="Name">Press Page Down to see the rest of the agreement.</PropertyCondition>
-                    <PropertyCondition Name="ControlType">Edit</PropertyCondition>
-                  </AndCondition>
-                  <SupportLevel>1</SupportLevel>
-                  <Descendants />
-                </UIObject>
-              </Descendants>
+              <Descendants />
             </UIObject>
             <UIObject ControlType="TitleBar" Id="UIPersonifySetupTitleBar" FriendlyName="Personify Setup " SpecialControlType="None">
               <TechnologyName>MSAA</TechnologyName>
@@ -318,7 +302,7 @@
                 </UIObject>
               </Descendants>
             </UIObject>
-            <UIObject ControlType="Window" Id="UIItemWindow2" FriendlyName="" SpecialControlType="None">
+            <UIObject ControlType="Window" Id="UIProgressbarWindow" FriendlyName="" SpecialControlType="None">
               <TechnologyName>MSAA</TechnologyName>
               <WindowTitles>
                 <WindowTitle>Personify Setup </WindowTitle>
