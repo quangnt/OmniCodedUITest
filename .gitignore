@@ -1,4 +1,5 @@
-/TestResults
-/OmniCodedUITest/bin/*
-/OmniCodedUITest/obj/*
+/TestResults/**
+/OmniCodedUITest/bin/**
+/OmniCodedUITest/obj/**
+/OmniCodedUITest/TestResults/**
 /build

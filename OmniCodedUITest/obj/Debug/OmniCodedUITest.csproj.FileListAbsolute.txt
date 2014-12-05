@@ -3,3 +3,4 @@ E:\PersonifyAutomation\OmniCodedUITest\OmniCodedUITest\bin\Debug\OmniCodedUITest
 E:\PersonifyAutomation\OmniCodedUITest\OmniCodedUITest\bin\Debug\OmniCodedUITest.pdb
 E:\PersonifyAutomation\OmniCodedUITest\OmniCodedUITest\obj\Debug\OmniCodedUITest.dll
 E:\PersonifyAutomation\OmniCodedUITest\OmniCodedUITest\obj\Debug\OmniCodedUITest.pdb
+E:\PersonifyAutomation\OmniCodedUITest\OmniCodedUITest\obj\Debug\OmniCodedUITest.csprojResolveAssemblyReference.cache
