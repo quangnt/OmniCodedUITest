@@ -12,66 +12,44 @@
     using Microsoft.VisualStudio.TestTools.UnitTesting;
     using Keyboard = Microsoft.VisualStudio.TestTools.UITesting.Keyboard;
     using Mouse = Microsoft.VisualStudio.TestTools.UITesting.Mouse;
-    using MouseButtons = System.Windows.Forms.MouseButtons;
-    using System.Xml;
-    using System.IO;
+    using MouseButtons = System.Windows.Forms.MouseButtons;    
+    using Microsoft.VisualStudio.TestTools.UITesting.WinControls;
 
     
     public partial class InstallerUIMap
     {
-        private string installerPath = null;
-        public string InstallerPathObject
-        {
-            get
-            {
-                if (installerPath == null) 
-                {
-                    readConfigFile();
-                }
-                return installerPath;
-            }
-            set
-            {
-                installerPath = value;
-            }
-        }
+        #region Installer Controls
 
-        private string installedPath = null;
-        public string InstalledPathObject
-        {
-            get
-            {
-                if (installedPath == null)
-                {
-                    readConfigFile();
-                }
-                return installedPath;
-            }
-            set
-            {
-                installedPath = value;
-            }
-        }
-        // Automatically install Personify(assume that UAC must be turn off to run this method successfully)
-        // Due to UAC turn on --> Need to be done later.
-        public void installPersonify()
-        {
-            Mouse.Click(this.UIPersonifySetupWindow.UIIAgreeWindow);
-            this.UIPersonifySetupWindow.UIProgressbarWindow.WaitForControlExist();
-            this.UIPersonifySetupWindow.WaitForControlNotExist();
-        }
+        public WinButton minimizeButton;
+        public WinButton maximizeButton;
+        public WinButton closeButton;
+        public WinButton xButton;
+        public WinButton iAgreeButton;
+        public WinButton cancelButton;
+        public WinButton backButton;
+        public WinButton showdetailsButton;
+        public WinText licenseAgreementText;
+        public WinText pleasereviewthelicenText;
+        public WinControl personifyLogo; 
+        public WinProgressBar progressBar;
+        #endregion
 
-        // Read config file of test project. ("Configuration.xml")
-        public void readConfigFile()
+        #region Constructor
+        public InstallerUIMap()
         {
-            XmlDataDocument xmldoc = new XmlDataDocument();
-            XmlNodeList xmlnode;
-            FileStream fs = new FileStream("Configuration.xml", FileMode.Open, FileAccess.Read);
-            xmldoc.Load(fs);
-            xmlnode = xmldoc.GetElementsByTagName("InstallerPath");
-            installerPath = xmlnode[xmlnode.Count - 1].InnerText;
-            xmlnode = xmldoc.GetElementsByTagName("InstalledPath");
-            installedPath = xmlnode[xmlnode.Count - 1].InnerText;
-        }       
+            personifyLogo = UIPersonifySetupWindow.UIItemWindow.UIPersonifyLogo;
+            minimizeButton = UIPersonifySetupWindow.UIPersonifySetupTitleBar.UIMinimizeButton;
+            maximizeButton = UIPersonifySetupWindow.UIPersonifySetupTitleBar.UIMaximizeButton;
+            xButton = UIPersonifySetupWindow.UIPersonifySetupTitleBar.UICloseButton;
+            iAgreeButton = UIPersonifySetupWindow.UIIAgreeWindow.UIIAgreeButton;
+            closeButton = UIPersonifySetupWindow.UIIAgreeWindow.UICloseButton;
+            cancelButton = UIPersonifySetupWindow.UICancelWindow.UICancelButton;
+            licenseAgreementText = UIPersonifySetupWindow.UILicenseAgreementWindow.UILicenseAgreementText;
+            pleasereviewthelicenText = UIPersonifySetupWindow.UIPleasereviewthelicenWindow.UIPleasereviewthelicenText;
+            progressBar = UIPersonifySetupWindow.UIProgressbarWindow.UIItemProgressBar;
+            showdetailsButton = UIPersonifySetupWindow.UIShowdetailsWindow.UIShowdetailsButton;
+            backButton = UIPersonifySetupWindow.UIBackWindow.UIBackButton;
+        }
+        #endregion          
     }
 }

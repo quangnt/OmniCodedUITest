@@ -126,7 +126,7 @@
                   <SupportLevel>0</SupportLevel>
                   <Descendants />
                 </UIObject>
-                <UIObject ControlType="Button" Id="UIAlreadyhaveanaccountButton" FriendlyName="Already have an account? Sign In" SpecialControlType="None">
+                <UIObject ControlType="Button" Id="UISignInButton" FriendlyName="Already have an account? Sign In" SpecialControlType="None">
                   <TechnologyName>UIA</TechnologyName>
                   <WindowTitles>
                     <WindowTitle>Personify</WindowTitle>
@@ -389,6 +389,48 @@
                       <PropertyCondition Name="Class">btn btn-primary inactive is-small-separator disabled</PropertyCondition>
                       <PropertyCondition Name="ControlDefinition">name=create disabled class="btn btn-prim</PropertyCondition>
                       <PropertyCondition Name="TagInstance">11</PropertyCondition>
+                    </FilterCondition>
+                  </AndCondition>
+                  <SupportLevel>0</SupportLevel>
+                  <Descendants />
+                </UIObject>
+              </Descendants>
+            </UIObject>
+            <UIObject ControlType="Document" Id="UIPersonifyOmniCreateaDocument" FriendlyName="Personify Omni - Create account" SpecialControlType="None">
+              <TechnologyName>Web</TechnologyName>
+              <WindowTitles />
+              <AndCondition Id="SearchCondition">
+                <AndCondition Id="Primary">
+                  <PropertyCondition Name="ControlType">Document</PropertyCondition>
+                  <PropertyCondition Name="Id" />
+                  <PropertyCondition Name="TagName">BODY</PropertyCondition>
+                  <PropertyCondition Name="RedirectingPage">False</PropertyCondition>
+                  <PropertyCondition Name="FrameDocument">False</PropertyCondition>
+                </AndCondition>
+                <FilterCondition Id="Secondary">
+                  <PropertyCondition Name="Title">Personify Omni - Create account</PropertyCondition>
+                  <PropertyCondition Name="AbsolutePath">/api/register</PropertyCondition>
+                  <PropertyCondition Name="PageUrl">https://omni.personifyinc.com/api/register?lang=en-US</PropertyCondition>
+                </FilterCondition>
+              </AndCondition>
+              <SupportLevel>0</SupportLevel>
+              <Descendants>
+                <UIObject ControlType="Pane" Id="UIWarning" FriendlyName="First Name cannot be blank." SpecialControlType="None">
+                  <TechnologyName>Web</TechnologyName>
+                  <WindowTitles />
+                  <AndCondition Id="SearchCondition">
+                    <AndCondition Id="Primary">
+                      <PropertyCondition Name="ControlType">Pane</PropertyCondition>
+                      <PropertyCondition Name="Id">User_first_name_em_</PropertyCondition>
+                      <PropertyCondition Name="Name" />
+                      <PropertyCondition Name="TagName">DIV</PropertyCondition>
+                    </AndCondition>
+                    <FilterCondition Id="Secondary">
+                      <PropertyCondition Name="InnerText">First Name cannot be blank.</PropertyCondition>
+                      <PropertyCondition Name="Title" />
+                      <PropertyCondition Name="Class">errorMessage errorMessaged</PropertyCondition>
+                      <PropertyCondition Name="ControlDefinition">class="errorMessage errorMessaged" id=Us</PropertyCondition>
+                      <PropertyCondition Name="TagInstance">21</PropertyCondition>
                     </FilterCondition>
                   </AndCondition>
                   <SupportLevel>0</SupportLevel>

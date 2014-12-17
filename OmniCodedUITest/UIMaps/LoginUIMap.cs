@@ -12,22 +12,31 @@
     using Keyboard = Microsoft.VisualStudio.TestTools.UITesting.Keyboard;
     using Mouse = Microsoft.VisualStudio.TestTools.UITesting.Mouse;
     using MouseButtons = System.Windows.Forms.MouseButtons;
+    using Microsoft.VisualStudio.TestTools.UITesting.WpfControls;
     
     
     public partial class LoginUIMap
     {
-        
-
-        // Perform login with Personify account
-        public void PersonifyLogin(string sname, string spass)
+        #region Login Controls
+        public WpfButton xButton;
+        public WpfButton googleSignInButton;
+        public WpfEdit usernameEdit;
+        public WpfEdit passwordEdit;
+        public WpfButton signinButton;
+        public WpfHyperlink forgotPasswordLink;
+        public WpfButton signupButton;
+        #endregion
+        #region Constructor
+        public LoginUIMap()
         {
-            this.UIPersonifyMainLoginWindow.UIPersonifySignInDialog.UIUsernameEdit.Text = sname;
-            this.UIPersonifyMainLoginWindow.UIPersonifySignInDialog.UIPasswordEdit.Text = spass;
-            Mouse.Click(this.UIPersonifyMainLoginWindow.UIPersonifySignInDialog.UISignInButton);
+            xButton = UIPersonifyMainLoginWindow.UICloseButton;
+            googleSignInButton = UIPersonifyMainLoginWindow.UIPersonifySignInDialog.UIGoogleSignInButton;
+            usernameEdit = UIPersonifyMainLoginWindow.UIPersonifySignInDialog.UIUsernameEdit;
+            passwordEdit = UIPersonifyMainLoginWindow.UIPersonifySignInDialog.UIPasswordEdit;
+            signinButton = UIPersonifyMainLoginWindow.UIPersonifySignInDialog.UISignInButton;
+            forgotPasswordLink = UIPersonifyMainLoginWindow.UIPersonifySignInDialog.UIForgotPassHyperlink;
+            signupButton = UIPersonifyMainLoginWindow.UIPersonifySignInDialog.UISignUpButton;
         }
-
-        
-
+        #endregion
     }
-
 }

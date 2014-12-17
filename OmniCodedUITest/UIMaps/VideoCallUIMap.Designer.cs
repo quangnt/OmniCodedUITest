@@ -155,22 +155,6 @@ namespace OmniCodedUITest.UIMaps.VideoCallUIMapClasses
                 return this.mUIStopVideoCallButton;
             }
         }
-        
-        public WpfImage UIWebcamFrameHost
-        {
-            get
-            {
-                if ((this.mUIWebcamFrameHost == null))
-                {
-                    this.mUIWebcamFrameHost = new WpfImage(this);
-                    #region Search Criteria
-                    this.mUIWebcamFrameHost.SearchProperties[WpfImage.PropertyNames.AutomationId] = "mWebcamFrame";
-                    this.mUIWebcamFrameHost.WindowTitles.Add("Control Panel");
-                    #endregion
-                }
-                return this.mUIWebcamFrameHost;
-            }
-        }
         #endregion
         
         #region Fields
@@ -185,8 +169,6 @@ namespace OmniCodedUITest.UIMaps.VideoCallUIMapClasses
         private WpfToggleButton mUIAddMemberButton;
         
         private WpfButton mUIStopVideoCallButton;
-        
-        private WpfImage mUIWebcamFrameHost;
         #endregion
     }
 }

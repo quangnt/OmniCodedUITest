@@ -192,19 +192,19 @@ namespace OmniCodedUITest.UIMaps.SignUpUIMapClasses
             }
         }
         
-        public WpfButton UIAlreadyhaveanaccountButton
+        public WpfButton UISignInButton
         {
             get
             {
-                if ((this.mUIAlreadyhaveanaccountButton == null))
+                if ((this.mUISignInButton == null))
                 {
-                    this.mUIAlreadyhaveanaccountButton = new WpfButton(this);
+                    this.mUISignInButton = new WpfButton(this);
                     #region Search Criteria
-                    this.mUIAlreadyhaveanaccountButton.SearchProperties[WpfButton.PropertyNames.Name] = "Already have an account? Sign In";
-                    this.mUIAlreadyhaveanaccountButton.WindowTitles.Add("Personify");
+                    this.mUISignInButton.SearchProperties[WpfButton.PropertyNames.Name] = "Already have an account? Sign In";
+                    this.mUISignInButton.WindowTitles.Add("Personify");
                     #endregion
                 }
-                return this.mUIAlreadyhaveanaccountButton;
+                return this.mUISignInButton;
             }
         }
         #endregion
@@ -216,7 +216,7 @@ namespace OmniCodedUITest.UIMaps.SignUpUIMapClasses
         
         private WpfText mUISignUpText;
         
-        private WpfButton mUIAlreadyhaveanaccountButton;
+        private WpfButton mUISignInButton;
         #endregion
     }
     
@@ -243,10 +243,24 @@ namespace OmniCodedUITest.UIMaps.SignUpUIMapClasses
                 return this.mUIPersonifyOmniCreateDocument;
             }
         }
+        
+        public UIPersonifyOmniCreateaDocument UIPersonifyOmniCreateaDocument
+        {
+            get
+            {
+                if ((this.mUIPersonifyOmniCreateaDocument == null))
+                {
+                    this.mUIPersonifyOmniCreateaDocument = new UIPersonifyOmniCreateaDocument(this);
+                }
+                return this.mUIPersonifyOmniCreateaDocument;
+            }
+        }
         #endregion
         
         #region Fields
         private UIPersonifyOmniCreateDocument mUIPersonifyOmniCreateDocument;
+        
+        private UIPersonifyOmniCreateaDocument mUIPersonifyOmniCreateaDocument;
         #endregion
     }
     
@@ -523,6 +537,51 @@ namespace OmniCodedUITest.UIMaps.SignUpUIMapClasses
         
         #region Fields
         private HtmlHyperlink mUITermsofServiceHyperlink;
+        #endregion
+    }
+    
+    [GeneratedCode("Coded UITest Builder", "11.0.50727.1")]
+    public class UIPersonifyOmniCreateaDocument : HtmlDocument
+    {
+        
+        public UIPersonifyOmniCreateaDocument(UITestControl searchLimitContainer) : 
+                base(searchLimitContainer)
+        {
+            #region Search Criteria
+            this.SearchProperties[HtmlDocument.PropertyNames.Id] = null;
+            this.SearchProperties[HtmlDocument.PropertyNames.RedirectingPage] = "False";
+            this.SearchProperties[HtmlDocument.PropertyNames.FrameDocument] = "False";
+            this.FilterProperties[HtmlDocument.PropertyNames.Title] = "Personify Omni - Create account";
+            this.FilterProperties[HtmlDocument.PropertyNames.AbsolutePath] = "/api/register";
+            this.FilterProperties[HtmlDocument.PropertyNames.PageUrl] = "https://omni.personifyinc.com/api/register?lang=en-US";
+            #endregion
+        }
+        
+        #region Properties
+        public HtmlDiv UIWarning
+        {
+            get
+            {
+                if ((this.mUIWarning == null))
+                {
+                    this.mUIWarning = new HtmlDiv(this);
+                    #region Search Criteria
+                    this.mUIWarning.SearchProperties[HtmlDiv.PropertyNames.Id] = "User_first_name_em_";
+                    this.mUIWarning.SearchProperties[HtmlDiv.PropertyNames.Name] = null;
+                    this.mUIWarning.FilterProperties[HtmlDiv.PropertyNames.InnerText] = "First Name cannot be blank.";
+                    this.mUIWarning.FilterProperties[HtmlDiv.PropertyNames.Title] = null;
+                    this.mUIWarning.FilterProperties[HtmlDiv.PropertyNames.Class] = "errorMessage errorMessaged";
+                    this.mUIWarning.FilterProperties[HtmlDiv.PropertyNames.ControlDefinition] = "class=\"errorMessage errorMessaged\" id=Us";
+                    this.mUIWarning.FilterProperties[HtmlDiv.PropertyNames.TagInstance] = "21";
+                    #endregion
+                }
+                return this.mUIWarning;
+            }
+        }
+        #endregion
+        
+        #region Fields
+        private HtmlDiv mUIWarning;
         #endregion
     }
 }

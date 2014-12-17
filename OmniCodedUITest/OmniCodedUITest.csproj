@@ -41,8 +41,10 @@
   <ItemGroup>
     <Reference Include="Microsoft.VisualStudio.QualityTools.UnitTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
     <Reference Include="System" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.Management" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.XML" />
     <Reference Include="UIAutomationTypes" />
@@ -54,10 +56,31 @@
     </CodeAnalysisDependentAssemblyPaths>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="OmniBase.cs" />
-    <Compile Include="TestExample.cs" />
-    <Compile Include="OmniBaseInterface.cs" />
-    <Compile Include="UIMapContainer.cs" />
+    <Compile Include="Config\AppConfig.cs" />
+    <Compile Include="Config\PlaybackConfig.cs" />
+    <Compile Include="Libraries\Applications\Installer.cs" />
+    <Compile Include="Libraries\Applications\Login.cs" />
+    <Compile Include="Libraries\DataAccess\Data.cs" />
+    <Compile Include="Libraries\Exceptions\InvalidLoginException.cs" />
+    <Compile Include="Resources\Utilities\NetworkConditions.cs" />
+    <Compile Include="Resources\Utilities\ObjectIdentification.cs" />
+    <Compile Include="Resources\Utilities\PersonifyInstance.cs" />
+    <Compile Include="Resources\Utilities\Verify.cs" />
+    <Compile Include="Personify.cs" />
+    <Compile Include="Resources\PlaybackConfiguration.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PlaybackConfiguration.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\SignInWarning.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SignInWarning.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Scripts\InstallerScripts.cs" />
+    <Compile Include="Scripts\PersonifyScriptsBase.cs" />
+    <Compile Include="Scripts\TestExample.cs" />
+    <Compile Include="Resources\Utilities\UIMapContainer.cs" />
     <Compile Include="UIMaps\GoogleSignInUIMap.cs">
       <DependentUpon>GoogleSignInUIMap.uitest</DependentUpon>
     </Compile>
@@ -102,7 +125,8 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <None Include="TestConfig.runsettings" />
+    <None Include="Config\TestConfig.runsettings" />
+    <None Include="TestData\LoginData.csv" />
     <None Include="UIMaps\GoogleSignInUIMap.uitest" />
     <None Include="UIMaps\InstallerUIMap.uitest" />
     <None Include="UIMaps\MainControlPanel.uitest" />
@@ -112,13 +136,23 @@
     <None Include="UIMaps\VideoCallUIMap.uitest" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Configuration.xml">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    <None Include="Config\App.config">
       <SubType>Designer</SubType>
-    </Content>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\PlaybackConfiguration.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>PlaybackConfiguration.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\SignInWarning.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>SignInWarning.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
   </ItemGroup>
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">

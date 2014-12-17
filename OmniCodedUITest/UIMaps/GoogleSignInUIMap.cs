@@ -16,11 +16,6 @@
     
     public partial class GoogleSignInUIMap
     {
-        public void GoogleLogin(Boolean signedGoogle, string email, string spass)
-        {
-            //this.UIPersonifyMainLoginWindow.UIPersonifySignInDialog.UIUsernameEdit.Text = email;
-            //this.UIPersonifyMainLoginWindow.UIPersonifySignInDialog.UIPasswordEdit.Text = spass;
-            //Mouse.Click(this.UIPersonifyMainLoginWindow.UIPersonifySignInDialog.UISignInButton);
-        }
+        
     }
 }

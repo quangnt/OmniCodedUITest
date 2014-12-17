@@ -127,18 +127,6 @@
               <SupportLevel>0</SupportLevel>
               <Descendants />
             </UIObject>
-            <UIObject ControlType="Image" Id="UIWebcamFrameHost" FriendlyName="mWebcamFrame" SpecialControlType="None">
-              <TechnologyName>UIA</TechnologyName>
-              <WindowTitles>
-                <WindowTitle>Control Panel</WindowTitle>
-              </WindowTitles>
-              <AndCondition>
-                <PropertyCondition Name="ControlType">Image</PropertyCondition>
-                <PropertyCondition Name="AutomationId">mWebcamFrame</PropertyCondition>
-              </AndCondition>
-              <SupportLevel>0</SupportLevel>
-              <Descendants />
-            </UIObject>
           </Descendants>
         </TopLevelWindow>
       </TopLevelWindows>
