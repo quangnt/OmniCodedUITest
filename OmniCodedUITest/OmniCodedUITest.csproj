@@ -62,10 +62,10 @@
     <Compile Include="Libraries\Applications\Login.cs" />
     <Compile Include="Libraries\DataAccess\Data.cs" />
     <Compile Include="Libraries\Exceptions\InvalidLoginException.cs" />
-    <Compile Include="Resources\Utilities\NetworkConditions.cs" />
-    <Compile Include="Resources\Utilities\ObjectIdentification.cs" />
-    <Compile Include="Resources\Utilities\PersonifyInstance.cs" />
-    <Compile Include="Resources\Utilities\Verify.cs" />
+    <Compile Include="Libraries\Utilities\NetworkConditions.cs" />
+    <Compile Include="Libraries\Utilities\ObjectIdentification.cs" />
+    <Compile Include="Libraries\Utilities\PersonifyInstance.cs" />
+    <Compile Include="Libraries\Utilities\Verify.cs" />
     <Compile Include="Personify.cs" />
     <Compile Include="Resources\PlaybackConfiguration.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -80,7 +80,7 @@
     <Compile Include="Scripts\InstallerScripts.cs" />
     <Compile Include="Scripts\PersonifyScriptsBase.cs" />
     <Compile Include="Scripts\TestExample.cs" />
-    <Compile Include="Resources\Utilities\UIMapContainer.cs" />
+    <Compile Include="Libraries\Utilities\UIMapContainer.cs" />
     <Compile Include="UIMaps\GoogleSignInUIMap.cs">
       <DependentUpon>GoogleSignInUIMap.uitest</DependentUpon>
     </Compile>
